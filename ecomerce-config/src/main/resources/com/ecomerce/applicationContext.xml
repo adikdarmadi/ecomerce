@@ -16,7 +16,7 @@
 	classpath*:jdbc.${spring.profiles.default}.properties
 	" />
 
-	<tx:annotation-driven />
+<!-- 	<tx:annotation-driven />
 <bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
 
     <property name="baselineOnMigrate" value="true" />
@@ -25,7 +25,7 @@
 
     <property name="dataSource" ref="dataSource" />
 
-</bean>
+</bean> -->
 
  
 
@@ -34,18 +34,7 @@
 		p:username="${jdbc.username}" p:password="${jdbc.password}" p:maxWait="40000"
 		p:maxActive="80" p:maxIdle="20" />
 
-	<!-- DATA SOURCE LOGGING ke MYSQL -->
-	<bean id="dataSourceLogging" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close" p:driverClassName="${jdbcLogging.driver}"
-		p:url="${jdbcLogging.url}" p:username="${jdbcLogging.username}"
-		p:password="${jdbcLogging.password}" p:maxWait="40000" p:maxActive="80"
-		p:maxIdle="20" />
-
-	<!-- Definition for loggingJdbcDaoImpl bean -->
-	<bean id="loggingJdbcDaoImpl"
-		class="com.ecomerce.medifirst2000.logging.dao.LoggingJdbcDaoImpl">
-		<property name="dataSource" ref="dataSourceLogging" />
-	</bean>
+	
 
 	<!-- we use hikari cp connection polling -->
 	<!-- <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig"> <property 
@@ -69,7 +58,7 @@
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.ecomerce.medifirst2000.entities" />
+		<property name="packagesToScan" value="com.ecomerce.entities" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="databasePlatform" value="${hibernate.dialect}" />
@@ -90,9 +79,9 @@
 		<!-- <property name="mappingResources" value="com/ecomerce/medifirst2000/purchasedTest.hbm.xml"/> -->
 	</bean>
 
-	<jpa:repositories base-package="com.ecomerce.medifirst2000.dao"
+	<jpa:repositories base-package="com.ecomerce.dao"
 		repository-impl-postfix="CustomImpl" />
-		<context:component-scan base-package="com.ecomerce.medifirst2000.service" />
+		<context:component-scan base-package="com.ecomerce.service" />
 		
 
 	<!-- Hibernate Statistics Monitoring -->
@@ -104,7 +93,7 @@
 		<map> <entry key="SpringBeans:name=hibernateStatisticsMBean" value-ref="hibernateStatisticsMBean" 
 		/> </map> </property> </bean> <context:mbean-server /> -->
 
-	<!-- <context:component-scan base-package="com.ecomerce.medifirst2000" 
+	<!-- <context:component-scan base-package="com.ecomerce" 
 		/> -->
 
 
