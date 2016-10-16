@@ -1,0 +1,44 @@
+save http://localhost:9090/ecomerce-web/laporan-uji-hasil/save-laporan-uji-hasil/
+
+json 
+{
+      "nomorContoh": "868",
+      "contohDari": "hasil uji 1",
+      "mapParameterToLaporanUjiHasil": [
+      	
+      {
+      	"parameter": {
+      	"id": "1"
+      	},
+      	"satuanStandar" : {
+      		"id" : "1"
+      	},
+      	"bakuMutu" : {
+      		"id" : "1950"
+      	},
+      	"hasilUji" : "hasil uji 1"
+      },
+            {
+      	"parameter": {
+      	"id": "1"
+      	},
+      	"satuanStandar" : {
+      		"id" : "1"
+      	},
+      	"bakuMutu" : {
+      		"id" : "1950"
+      	},
+      	"hasilUji" : "hasil uji 2"
+      }
+      
+      		
+      ],
+      "tanggalPengujianContohFrom": "1473181200000",
+      "jenisContoh": "bla bla bakar",
+      "alamat": "dreamland",
+      "tanggalPengujianContohTo": "1473699600000",
+      "tipeLokasi": "fiksi",
+      "tanggalPenerimaanContoh": "1473181200000"
+}
+
+http://localhost:9090/ecomerce-web/laporan-uji-hasil/find-all-paging?take=4

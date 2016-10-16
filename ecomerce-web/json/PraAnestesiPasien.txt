@@ -1,0 +1,196 @@
+http://localhost:8080/ecomerce-web/pra-anestesi-pasien/save-pra-anestesi-pasien/
+{
+        "jenisOperasi": "Operasi Paru",
+        "tahun": "2016",
+        "keluhan": "Batuk",
+        "jenisAnestesi": "Anestesi B",
+        "praAnestesiPasienDetail": [
+            {
+                "statusYaTidak": {
+                    "id": 2
+                },
+                "kategoriPraAnestesi": {
+                     "id": 1,
+                     "name":"Merokok",
+                     "kategori":"Kebiasaan"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 2,
+                     "name":"Alkohol",
+                     "kategori":"Kebiasaan"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 3,
+                     "name":"Kopi/Teh/Cola",
+                     "kategori":"Kebiasaan"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 4,
+                     "name":"Olahraga Rutin",
+                     "kategori":"Kebiasaan"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 5,
+                     "name":"Asma",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 6,
+                     "name":"Tekanan Darah Tinggi",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 7,
+                     "name":"Kencing Manis",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 8,
+                     "name":"Maag",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 9,
+                     "name":"Kelainan Jantung",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 10,
+                     "name":"Kejang/epilepsi/ayan",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 11,
+                     "name":"Penyakit Berat Lainnya",
+                     "kategori":"Riwayat Penyakit"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 12,
+                     "name":"Riwayat Transfusi Darah",
+                     "kategori":"Riwayat Transfusi Darah"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 13,
+                     "name":"Reaksi Transfusi",
+                     "kategori":"Riwayat Transfusi Darah"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 14,
+                     "name":"Melakukan Pemeriksaan HIV",
+                     "kategori":"Riwayat Transfusi Darah"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 15,
+                     "name":"Kacamata/Soft Lens",
+                     "kategori":"Assesories"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 16,
+                     "name":"Alat Bantu Dengar",
+                     "kategori":"Assesories"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 17,
+                     "name":"Gigi Palsu",
+                     "kategori":"Assesories"
+                },
+                "keterangan": "Sering sekali"
+            },{
+                "statusYaTidak": {
+                    "id": 1
+                },
+                "kategoriPraAnestesi": {
+                     "id": 18,
+                     "name":"Perhiasan",
+                     "kategori":"Assesories"
+                },
+                "keterangan": "Sering sekali"
+            }],
+        "riwayatPembedahan": {
+            "id": 1
+        },
+        "tglRegistrasi" : "2016-07-21",
+        "pasien":{
+            "id":"530"
+        }
+}

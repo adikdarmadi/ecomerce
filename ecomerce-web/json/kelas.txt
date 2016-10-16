@@ -1,0 +1,13 @@
+http://localhost:8080/ecomerce-web/kelas/save-kelas/
+{
+    
+    "kdProfile": 0,
+    "noUrut": 1,
+    "qKelas": 1,
+    "namaExternal": "KELAS III",
+    "noRec": "07595aff-3315-48f7-84a5-4e15dd32",
+    "statusEnabled": true,
+    "namaKelas": "KELAS III",
+    "kodeExternal": "01",
+    "reportDisplay": "KELAS III"
+  }

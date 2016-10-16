@@ -1,0 +1,23 @@
+http://localhost:80/ecomerce-web/kartu-pengendali/save-kartu-pengendali
+
+{ 
+    "tanggal": "2016-08-31",
+    "kartuPengendaliDetail": [
+        {
+          "hargaSatuanBarang": "40000",
+          "volumeBarang": "2",
+          "detailRup": {
+            "noRec": "2c9090ab56e15d260156e167866d0012"
+          }
+    
+        },
+        {
+          "hargaSatuanBarang": "50000",
+          "volumeBarang": "2",
+          "detailRup": {
+            "noRec": "2c9090ab56e15d260156e169ea55001b"
+          }
+    
+        }
+    ]
+}

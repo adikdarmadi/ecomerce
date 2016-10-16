@@ -1,0 +1,232 @@
+http://localhost:8888/ecomerce-web/service/list-generic/?view=DataPertanyaanSkriningGizi&select=*
+http://localhost:8888/ecomerce-web/service/list-generic/?view=StatusYaTidak&select=*
+
+post : http://localhost:8080/ecomerce-web/skrining-gizi/save-skrining-gizi
+
+{
+      "tglInput": "1466322336000",
+      "tinggiBadan": "11",
+      "beratBadan": "11",
+      "noRec": "",
+      "papSkriningGiziDetailSet": [
+  {   "kdProfile": "",
+      "noRec": "",
+      "statusEnabled": "",
+      "nilai": "0",
+      "skriningGizi" : {
+        "id": 1,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "noRec": "bnjh                            ",
+        "statusEnabled": true,
+        "name": "Apakah Pasien memiliki status nutrisi kurang atau buruk secara klinis? (anak kurus/sangat kurus, mata cekung, wajah tampak \"tua\". edema, rambut tipis dan jarang, otot lengan dan paha tipis, iga gambang, perut kempes, bokong tipis dan kisut",
+        "kodeExternal": null,
+        "stat": "0",
+        "reportDisplay": null
+  },
+      "yaTidak": {
+        "id": 1,
+        "kodeExternal": null,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "reportDisplay": "-",
+        "noRec": "af9988ed-e6de-4b5a-af40-9ef5d173",
+        "statusEnabled": true,
+        "name": "Tidak"
+      }      
+  },
+  {   "kdProfile": "",
+      "noRec": "",
+      "statusEnabled": "",
+      "nilai": "0",
+      "skriningGizi" : {
+        "id": 2,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "noRec": "bnh                             ",
+        "statusEnabled": true,
+        "name": "Apakah terdapat penurunan berat badan tidak naik selama 3 bulan terakhir? Jika ibu pasien menjawab tidak tahu, dianggap jawaban \"ya\" (1)",
+        "kodeExternal": null,
+        "stat": "0",
+        "reportDisplay": null
+  },
+      "yaTidak": {
+        "id": 1,
+        "kodeExternal": null,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "reportDisplay": "-",
+        "noRec": "af9988ed-e6de-4b5a-af40-9ef5d173",
+        "statusEnabled": true,
+        "name": "Tidak"
+      }      
+  },
+  {   "kdProfile": "",
+      "noRec": "",
+      "statusEnabled": "",
+      "nilai": "0",
+      "skriningGizi" : {
+        "id": 3,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "noRec": "fvg                             ",
+        "statusEnabled": true,
+        "name": "Apakah terdapat SALAH SATU dari kondisi berikut? Diare profuse (>5x/hari) dan atau muntah (>3x/hari) Asupan makanan berkurang selama 1 minggu terakhir",
+        "kodeExternal": null,
+        "stat": "0",
+        "reportDisplay": null
+  },
+      "yaTidak": {
+        "id": 1,
+        "kodeExternal": null,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "reportDisplay": "-",
+        "noRec": "af9988ed-e6de-4b5a-af40-9ef5d173",
+        "statusEnabled": true,
+        "name": "Tidak"
+      }      
+  },
+  {   "kdProfile": "",
+      "noRec": "",
+      "statusEnabled": "",
+      "nilai": "0",
+      "skriningGizi" : {
+        "id": 4,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "noRec": "bbb                             ",
+        "statusEnabled": true,
+        "name": "Apakah terdapat penyakit dasar atau keadaan yang mengakibatkan pasien beresiko mengalami malnutrisi (lihat tabel dibawah) ?",
+        "kodeExternal": null,
+        "stat": "0",
+        "reportDisplay": null
+  },
+      "yaTidak": {
+        "id": 1,
+        "kodeExternal": null,
+        "kdProfile": 0,
+        "namaExternal": null,
+        "reportDisplay": "-",
+        "noRec": "af9988ed-e6de-4b5a-af40-9ef5d173",
+        "statusEnabled": true,
+        "name": "Tidak"
+      }      
+  }
+  ],
+  "lingkarKepala": "11",
+     "pasien": {
+        "kdProfile": 0,
+        "id": 529,
+        "jenisKelamin": {
+          "kdProfile": 0,
+          "statusEnabled": true,
+          "id": 1,
+          "noRec": "d17b783b-f5f6-40db-9cdf-6186559c",
+          "reportDisplay": "L",
+          "kodeExternal": "L",
+          "namaExternal": "Laki-laki",
+          "jenisKelamin": "Laki-laki",
+          "kdJenisKelamin": 1,
+          "qJenisKelamin": 1
+        },
+        "jenisKelaminId": 1,
+        "pekerjaan": {
+          "kdProfile": 0,
+          "statusEnabled": true,
+          "id": 1,
+          "noRec": "8AADDC4A-A08C-4B98-A1D9-FA5BD991",
+          "reportDisplay": "Tidak bekerja",
+          "kodeExternal": "TB",
+          "namaExternal": "Tidak bekerja",
+          "kdPekerjaan": 0,
+          "pekerjaan": "Tidak bekerja",
+          "qPekerjaan": 1
+        },
+        "pekerjaanId": 1,
+        "pendidikan": {
+          "kdProfile": 0,
+          "statusEnabled": true,
+          "id": 1,
+          "noRec": "4584e864-16e5-46b7-b44c-f311d1c9",
+          "reportDisplay": "TK",
+          "kodeExternal": "T",
+          "namaExternal": "TK",
+          "jenisPendidikan": {
+            "kdProfile": 0,
+            "statusEnabled": true,
+            "id": 1,
+            "noRec": "2b005911-743d-4c53-afcf-e1d3d4d2",
+            "reportDisplay": "FORMAL",
+            "kodeExternal": "01",
+            "namaExternal": "FORMAL",
+            "jenisPendidikan": "FORMAL",
+            "kdJenisPendidikan": "A",
+            "qJenisPendidikan": 1
+          },
+          "kdPendidikan": "A0",
+          "noUrut": 1,
+          "namaPendidikan": "TK",
+          "qPendidikan": 1
+        },
+        "pendidikanId": 1,
+        "statusPerkawinan": {
+          "kdProfile": 0,
+          "statusEnabled": true,
+          "id": 1,
+          "noRec": "867127e8-f0a6-45f5-b2dd-9e7c384b",
+          "reportDisplay": "Belum kawin",
+          "kodeExternal": "01",
+          "namaExternal": "Belum kawin",
+          "kdStatusPerkawinan": 1,
+          "qStatusPerkawinan": 1,
+          "statusPerkawinan": "Belum kawin"
+        },
+        "statusPerkawinanId": 1,
+        "titlePasien": {
+          "kdProfile": 0,
+          "statusEnabled": true,
+          "id": 1,
+          "noRec": "cbbc4d83-0470-4181-82dd-e63500c7",
+          "reportDisplay": "Tn",
+          "kodeExternal": "01",
+          "namaExternal": "Tn",
+          "jenisKelamin": {
+            "kdProfile": 0,
+            "statusEnabled": true,
+            "id": 1,
+            "noRec": "d17b783b-f5f6-40db-9cdf-6186559c",
+            "reportDisplay": "L",
+            "kodeExternal": "L",
+            "namaExternal": "Laki-laki",
+            "jenisKelamin": "Laki-laki",
+            "kdJenisKelamin": 1,
+            "qJenisKelamin": 1
+          },
+          "jenisKelaminId": 1,
+          "statusPerkawinan": {
+            "kdProfile": 0,
+            "statusEnabled": true,
+            "id": 1,
+            "noRec": "867127e8-f0a6-45f5-b2dd-9e7c384b",
+            "reportDisplay": "Belum kawin",
+            "kodeExternal": "01",
+            "namaExternal": "Belum kawin",
+            "kdStatusPerkawinan": 1,
+            "qStatusPerkawinan": 1,
+            "statusPerkawinan": "Belum kawin"
+          },
+          "statusPerkawinanId": 1,
+          "maxAge": 50,
+          "minAge": 17,
+          "namaTitle": "Tn",
+          "qTitle": 1
+        },
+        "titlePasienId": 1,
+        "namaPasien": "Ade Darmadi",
+        "namaIbu": "Ibu Yom",
+        "noCm": "000000000000002",
+        "tglDaftar": 1468419450316,
+        "tglLahir": 629424000000
+      }
+    }

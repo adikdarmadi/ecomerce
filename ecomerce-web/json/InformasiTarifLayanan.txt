@@ -1,0 +1,11 @@
+GET ALL TARIF :
+http://localhost:9090/ecomerce-web/informasi-tarif-layanan/get-all-tarif-produk/
+
+GET TARIF BY NAMA PRODUK :
+http://localhost:9090/ecomerce-web/informasi-tarif-layanan/get-harga-netto-by-nama-produk/"NAMAPRODUK"/
+
+GET TARIF BY ID PRODUK :
+http://localhost:9090/ecomerce-web/informasi-tarif-layanan/get-tarif-by-id-produk/IDPRODUK/
+
+GET PRODUK BY DETAIL JENIS PRODUK AKOMODASI :
+/informasi-tarif-layanan/get-produk-by-detail-jenis-produk-akomodasi/

@@ -1,0 +1,35 @@
+list ruangan : http://localhost:8181/ecomerce-web/service/list-generic/?view=Ruangan&select=*
+list pegawai : http://localhost:8181/ecomerce-web/service/list-generic/?view=Pegawai&select=*
+
+http://localhost:8080/ecomerce-web/lembarKonsultasi/save-lembar-konsultasi/
+{
+    "kdProfile": "",
+    "statusEnabled": "",
+    "noRec": "2c90909e567371d901567372fd950000",
+    "pasien": {
+      "kdProfile": 0,
+      "id": 1746
+     },
+    "ruangan": {
+      "kdProfile": 0,
+      "statusEnabled": true,
+      "id": 1
+      },
+    "pegawai": {
+      "kdProfile": 0,
+      "statusEnabled": true,
+      "id": 1      
+      },
+    "jawabanKonsultasi" : {
+      "kdProfile": "",
+      "noRec": "2c90909e567371d901567372fda50001",
+      "statusEnabled": "",
+      "keterangan": "aaaaaaaaaa",
+      "tglJawaban": "1470842902000",
+      "jawaban": "bbbbbb"       
+    },
+    "tanggal" : "1470842902000",
+    "tglInput": 1470324502000,
+    "hasilPemeriksaan": "Infeksi  Kampretoo",
+    "saran": "Sebaiknya dilakukan pemeriksaan lebih lanjut"
+  }

@@ -1,0 +1,17 @@
+http://localhost:8080/ecomerce-web/skoringPasienGawatIGD/save-skoring-pasien-gawat-IGD/
+
+{
+      "kdProfile": "",
+      "noRec": "",
+      "statusEnabled": "",
+      "kategori": {
+           "id": "2"
+      },
+       "pasien": {
+        "id": "177"
+       },
+       
+        "skoring": {
+        "id": "1"
+        }
+}

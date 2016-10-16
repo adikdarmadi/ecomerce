@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="kartuPasien" pageWidth="504" pageHeight="288" columnWidth="464" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37d3e422-6ff6-4762-85a0-af0e88100e2c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="namaPasien" class="java.lang.String"/>
+	<field name="umur" class="java.lang.String"/>
+	<field name="noCm" class="java.lang.String"/>
+	<field name="tglDaftar" class="java.util.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="174" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c20c6b82-ee12-49a8-9dd5-ee52ce38269e" x="164" y="67" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama pasien]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bab77a6b-8bb7-4f20-838d-f95c0e1b5b8b" x="264" y="67" width="164" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namaPasien}!=null?$F{namaPasien}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="faf95f18-f109-47e4-8b66-686308accfc8" x="164" y="49" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No Catatan Medis]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2ee91fda-d0c4-4257-aa18-976a6265f311" x="264" y="49" width="164" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{noCm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f3c72e72-2747-482e-9cd9-39b34ae30d72" x="164" y="85" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ad558843-c4ab-45ca-a66a-02c30be32e1c" x="264" y="85" width="164" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{umur}!=null?$F{umur}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="14626790-dd2b-43a0-a85a-c9194db878b9" x="164" y="17" width="252" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kartu Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8198eb25-cca5-4975-b02c-bc52bd014af9" x="164" y="103" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Daftar]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d7f75eba-ab9b-417a-a414-262a0ee1a078" x="32" y="11" width="124" height="156"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.qrcode.QRCodeWriter().encode($F{noCm},
+         com.google.zxing.BarcodeFormat.QR_CODE, 350, 350))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="da7dece6-7e5f-45a9-88a0-28acfe2d7eeb" x="264" y="103" width="164" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($F{tglDaftar})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

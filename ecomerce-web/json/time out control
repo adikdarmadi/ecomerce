@@ -1,0 +1,25 @@
+post : http://localhost:8080/ecomerce-web/time-out-control/save-time-out-control
+
+{
+    "halKhusus": "hal khusus 1",
+    "namaAntibiotik": "nama anti biotik 1",
+    "dosisAntibiotik": "dosis 1",
+    "pelaksana": [
+        {
+            "jenisPegawai":"Dokter Bedah",
+            "namaPelaksana":"Amalia Evianti, SP.RAD.DR."
+        }
+    ],
+    "antiBiotikProfilaksis": [
+        {
+            "name": "Ya"
+           
+        }
+    ],
+    "photoRadiologi": [
+        {
+            "name": "Ya"
+        }    
+    ]
+}
+

@@ -1,0 +1,8 @@
+POST : http://localhost:9090/ecomerce-web/pertanyaanSurvey/save-pertanyaan-survey/
+JSON : 
+{
+	"pertanyaan": "Apakah anda menyukai dokter ?"
+}
+
+
+GET ALL : http://localhost:9090/ecomerce-web/service/list-generic/?view=PertanyaanSurvey&select=*

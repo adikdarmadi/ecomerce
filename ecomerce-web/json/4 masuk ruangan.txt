@@ -1,0 +1,5 @@
+http://localhost:8080/ecomerce-web/registrasi-pelayanan-pasien/save-pemeriksaan-selanjutnya/
+
+{
+    "noRegistrasi":"1606000001"
+}

@@ -1,0 +1,17 @@
+http://localhost:8080/ecomerce-web/observasiIGD/save-observasi-igd/
+
+{
+     
+      "obat": {
+        "id": 1
+      },
+      "caraPemberianObat": {
+        "id": 1
+      },
+       "dosis": 2,
+      "frekuensi": 2,
+      "tglRegistrasi" : "2016-08-02",
+      "pasien":{
+            "id":555
+        }
+}

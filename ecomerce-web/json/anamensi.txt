@@ -1,0 +1,21 @@
+{
+      "riwayatPenyakitPengobatan": [
+         {
+     
+	      "riwayatPengobatan": "Bodrek",
+	      "riwayatPenyakit": "Btuk"
+	    },
+	    
+	     {
+     
+	      "riwayatPengobatan": "Paramek",
+	      "riwayatPenyakit": "Pusing"
+	    }
+    ],
+      "anamansisDokter": "Test Anamasnsis",
+      "tanggalPendaftaran": "2016-07-07",
+      "pasien": {
+        "id": 501
+      },
+      "anamansisSuster": "test anamasis suster"
+    }

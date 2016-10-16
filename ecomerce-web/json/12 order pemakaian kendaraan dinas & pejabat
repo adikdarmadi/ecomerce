@@ -1,0 +1,12 @@
+http://localhost:8080/ecomerce-web/order-kendaraan-dinas/entity-serelize/OrderKendaraanDinasVO
+http://localhost:8080/ecomerce-web/order-kendaraan-dinas/find-by-noorder?noOrder=1607000001
+
+{
+    "tujuan": "Bandung",
+    "waktuKeberangkatan": "2016-07-27 ",
+    "tglKeberangkatan": "2016-07-27",
+    "petugasYangBerangkat": "Tes",
+    "unitKerja":{
+        "id":1
+    }
+}

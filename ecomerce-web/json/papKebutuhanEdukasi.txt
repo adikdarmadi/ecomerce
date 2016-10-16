@@ -1,0 +1,21 @@
+http://localhost:8080/ecomerce-web/kebutuhan-edukasi/save-kebutuhan-edukasi/
+
+{
+    "id": "",
+    "tanggalJadwal": 1355245200000,
+    "kdProfile": 0,
+    "namaExternal": "jadwal2",
+    "statusEnabled": true,
+    "noRec": "40288cb855ed211c0155ed2df9600007",
+    "kodeExternal": null,
+    "reportDisplay": "1",
+    "ruangan":{
+        "id":1
+        },
+    "dokter":{
+        "id":"1"
+    },
+    "jadwalPraktek":{
+        "id":"1"
+    }
+  }

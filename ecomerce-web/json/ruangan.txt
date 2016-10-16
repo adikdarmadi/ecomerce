@@ -1,0 +1,46 @@
+http://localhost:8080/ecomerce-web/ruangan/save-ruangan/
+
+{
+    "jamTutup": "",
+    "kdRuangan": "K01",
+    "departemenId": "1",
+    "kodeExsternal": "212",
+    "departemen": {
+     "kdProfile": 0,
+      "statusEnabled": true,
+      "id": 2,
+      "noRec": "80b0f7f0-762f-453a-a581-36b7a05d",
+      "reportDisplay": "INSTALASI RAWAT INAP",
+      "kodeExternal": "001",
+      "namaExternal": "INSTALASI RAWAT INAP",
+      "kdDepartemen": "2",
+     
+      "namaDepartemen": "INSTALASI RAWAT INAP",
+      "qDepartemen": 3
+    },
+    "lokasiRuangan": "Ruangan",
+
+    "alamatEmail": "aaa@gmail.com",
+    "id": "",
+    "qRuangan": "11",
+  
+    "prefixNoAntrian": "1",
+    "faksimile": "",
+    "namaExternal": "INSTALASI RAWAT",
+    "pegawaiKepalaId": "1",
+    "noRec": "18fba4cd-b830-422f-bc2e-23bpo0",
+    "fixedPhone": "",
+    "namaRuangan": "Ruang rawat inap sekian",
+    "modulAplikasiId": "1",
+    "website": "1",
+    "noRuangan": "1",
+ 
+    "kdProfile": "1",
+    "mobilePhone": "",
+    "statusEnabled": "true",
+    "jamBuka": "",
+    "kelasHeadId": "",
+    "reportDisplay": "0",
+    "noCounter": ""
+
+  }

@@ -1,0 +1,14 @@
+package com.ecomerce.enums;
+
+/**
+ * Base class untuk enum <T> tipe dari internal valuenya
+ * 
+ * @author Roberto
+ */
+public interface BaseModelEnum<T> {
+
+	/**
+	 * get internal value
+	 */
+	T getInternalValue();
+}

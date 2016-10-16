@@ -1,0 +1,63 @@
+http://localhost:8080/ecomerce-web/check-in/save-check-in/
+
+{
+     "jenisOperasi": {
+        "id": "1"
+     },
+      "td": "aa",
+      "kodeExsternal": "",
+      "kesadaran": "baik",
+      
+      "n": "bb",
+      "tinggiBadan": "231",
+      "jumlah": "1",
+      "rr": "cc",
+      "beratBadan": "99",
+      "makanMinumTerakhir": "1",
+      "kdProfile": "11",
+      "pasienDaftarId": "",
+      "namaExternal": "aaa",
+      "statusEnabled": true,
+      "noRec": "09898877665",
+      
+      "reportDisplay": "jjj",
+     
+      "alatTerpasang": [
+          {
+        
+          "noRec": "",
+          "statusEnabled": "",
+          "alatTerpasang": {
+            "id": 1
+          }
+          },
+          {
+        
+          "noRec": "",
+          "statusEnabled": "",
+          "alatTerpasang": {
+            "id": 2
+          }
+          }],
+       "pengobatanKhusus": [
+          {
+          "noRec":"",
+          "pengobatanKhusus":{
+               "id":"1"
+              }
+      },
+      {
+          "noRec":"",
+          "pengobatanKhusus":{
+               "id":"2"
+              }
+      }],
+         "puasa": {
+        
+        "id": 1
+      },
+       "tglRegistrasi" : "2011-11-11",
+        "pasien":{
+            "id":"501"
+         }
+}

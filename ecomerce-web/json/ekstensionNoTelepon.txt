@@ -1,0 +1,22 @@
+POST : http://localhost:9090/ecomerce-web/ekstension-no-telepon/save-ekstension/
+JSON : 
+{
+	"statusSemuaRuangan" : {
+		"id" : 1
+	},
+	"statusPelanggan" : {
+		"id" : 1
+	},
+	"ruangan" : {
+		"id" : 1
+	},
+	"counterNumber" : 1,
+	"noEkstension" : "dasdsa"
+}
+
+
+DELETE (PAKE METHOD GET) : http://localhost:9090/ecomerce-web/ekstension-no-telepon//delete-ekstension/2563/
+
+FIND ALL : 
+http://localhost:9090/ecomerce-web/ekstension-no-telepon/find-all-ekstension/
+http://localhost:9090/ecomerce-web/service/list-generic/?view=EkstensionNoTelepon&select=*

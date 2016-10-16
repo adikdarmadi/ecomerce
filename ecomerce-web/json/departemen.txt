@@ -1,0 +1,20 @@
+http://localhost:8080/ecomerce-web/departemen/save-departemen/
+{
+    "namaDepartemen": "INSTALASI FARMASI",
+    "website": null,
+    "qDepartemen": 1,
+    "kodeExternal": "012",
+    "kdDepartemen": "1",
+    "alamatEmail": null,    
+    "kdProfile": 0,
+    "mobilePhone": null,
+    "prefixNoAntrian": null,
+    "pegawaiKepalaId": null,
+    "faksimile": null,
+    "namaExternal": "FARMASI",
+    "noRec": "daa379c9-7797-4401-a030-d0a65ce8",
+    "statusEnabled": true,
+    "fixedPhone": null,
+    "jenisPerawatanId": 9,
+    "reportDisplay": "FARMASI"
+  }

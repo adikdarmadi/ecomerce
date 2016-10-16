@@ -1,0 +1,20 @@
+post : http://localhost:8080/ecomerce-web/permintaan-barang-dari-ruangan/save-permintaan-barang-dari-ruangan
+
+{  
+    "tglOrder": "2016-08-01",
+    "statusBarang": {
+        "id" : 3
+    },
+    "ruangan": {
+        "id" : 93
+    },
+    "permintaanBarangDariRuanganSet": [
+        {    
+            "namaBarang" : "Pewangi",
+            "stok" : 10,
+            "qty" : 5,
+            "satuan" : "Unit"
+            
+        }
+    ]
+}

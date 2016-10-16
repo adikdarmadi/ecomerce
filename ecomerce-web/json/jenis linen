@@ -1,0 +1,5 @@
+post : http://localhost:8080/ecomerce-web/jenis-linen/save-jenis-linen
+
+{  
+    "jenisLinen" : "OK"
+}

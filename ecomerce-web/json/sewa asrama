@@ -1,0 +1,14 @@
+post : http://localhost:8080/ecomerce-web/sewa-asrama/save-sewa-asrama
+
+{
+    "namaPenyewa" : "Arya",
+    "noKTP" : "123456789",
+    "noHp" : "0812345678",
+    "alamat" : "RS Harapan Kita",
+    "tglSewaAsramaAwal" : "2016-08-01",
+    "tglSewaAsramaAkhir" : "2016-08-05",
+    "noKamar" : {
+        "id" : 1
+    },
+    "harga" : 150000
+}

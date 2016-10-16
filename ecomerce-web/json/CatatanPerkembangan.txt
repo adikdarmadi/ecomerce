@@ -1,0 +1,27 @@
+http://localhost:8080/ecomerce-web/catatanPerkembangan/save-catatan-perkembangan/
+
+{
+     "kdProfile": 1,
+      "statusEnabled": false,
+      "noRec": "",
+      "pengobatan": "Sesuai saran dokter",
+      "pemeriksaanHormonal": "benar",
+      "pemeriksaanUrin": "benar",
+      "pemeriksaanUltra": "benar",
+      "tglHaidKembali": 1481475600000,
+      "rencana": "benar",
+       "pasienDaftar": {
+        "kdProfile": 0,
+        "noRec": "40288cc255a0b1110155a0b58bef0012"
+       },
+        "pasien": {
+          "kdProfile": 0,
+          "id": 432
+        },
+        "catatan": {
+        "kdProfile": 1,
+        "statusEnabled": true,
+        "id": 2
+        }
+        
+}

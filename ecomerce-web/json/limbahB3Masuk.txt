@@ -1,0 +1,47 @@
+http://localhost:9090/ecomerce-web/struk-pelayanan/simpan-limbah-b3-masuk/
+
+{
+    "strukPelayanan" : {
+        "alamatemailrekanan" : "jenis limbah nih from tcf 02 sept",
+        "tglstruk" : "1472403600000",
+        "kdkelompoktransaksi" : {
+            "id" : "1"
+        },
+        "kdruangan" : {
+            "id" : "1"
+        },
+        "kdruanganasal" : {
+            "id" : "1"
+        },
+        "satuanWaktuKesling" : {
+            "id" : "1"
+        },
+        "qtyproduk" : "101",
+        "statusEnabled" : true
+    },
+    "strukPelayananDetail":{
+        "aturanpakai" : "limbah from tcf 02 spt",
+        "tglpelayanan" : "1472403600000",
+        "kdproduk" : {
+            "id" : "1"
+        },
+       "strukPelayananDPetugas": [
+        {
+            "kdpegawai": {
+                "id" : "1"
+            },
+            "deskripsitugasfungsi" : "menjaga limbah",
+            "ispetugaspepjawab" : "1"
+        },
+        {
+            "kdpegawai": {
+                "id" : "2"
+            },
+            "deskripsitugasfungsi" : "menerima limbah"
+        }
+    ]
+    }
+    
+}
+
+find all : http://localhost:9090/ecomerce-web/struk-pelayanan/find-all-limbah-b3-masuk/

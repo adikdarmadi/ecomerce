@@ -1,0 +1,88 @@
+package com.ecomerce.medifirst2000.entities;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;import org.hibernate.validator.internal.util.logging.Messages;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.ecomerce.medifirst2000.base.BaseMaster;
+import com.ecomerce.medifirst2000.helper.EmailCustomAnnotation;
+import com.ecomerce.medifirst2000.helper.ICustomAnnotation;
+
+@Entity
+@Table(name = "Pasien")
+public class Pasien extends BaseMaster {
+
+	
+	
+	@Length(min = 5,max =100, message = "Nama Panjang Miimal 5 Max 100")
+	@Column(name = "nama", nullable = true )
+	private String nama;
+
+	@Length(min = 5,max=200, message= "Alamat Panjang Minimal 6 max 100")
+	@Column(name = "alamat", nullable = false )
+	private String alamat;
+	
+	@Column(name = "umur", nullable = true)
+	private Integer umur;
+	
+	@ManyToOne
+	@NotNull(message="Group Pasien Harus Diisi")
+	@JoinColumn(name = "groupPasienFk")
+	private GroupPasien groupPasien;
+	
+	
+	@JsonManagedReference
+	@OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="pasien")
+	private Set<PasienPenyakit> pasienPenyakitSet = new HashSet<PasienPenyakit>();
+	
+	
+	
+
+	public String getNama() {
+		return nama;
+	}
+
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+
+	public String getAlamat() {
+		return alamat;
+	}
+
+	public void setAlamat(String alamat) {
+		this.alamat = alamat;
+	}
+
+	public GroupPasien getGroupPasien() {
+		return groupPasien;
+	}
+
+	public void setGroupPasien(GroupPasien groupPasien) {
+		this.groupPasien = groupPasien;
+	}
+
+	public Set<PasienPenyakit> getPasienPenyakitSet() {
+		return pasienPenyakitSet;
+	}
+
+	public void setPasienPenyakitSet(Set<PasienPenyakit> pasienPenyakitSet) {
+		this.pasienPenyakitSet = pasienPenyakitSet;
+	}	
+	
+	
+
+}

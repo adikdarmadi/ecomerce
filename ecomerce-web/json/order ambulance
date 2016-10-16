@@ -1,0 +1,15 @@
+post : http://localhost:8080/ecomerce-web/order-ambulance/save-order-ambulance
+
+{  
+    "tglOrder": "2016-07-27",
+    "namaPasien": "Vinra",
+    "namaPenanggungJawabKeluarga": "Reza",
+    "noPenanggungJawabKeluarga": "08577221133",
+    "namaTempatTujuan": "Tujuan Test",
+    "alamatLengkapTujuan": "Bandung",
+    "namaPelayanan": {
+        "id" : 6,
+        "namaProduk" : "Trombosit"
+    },
+    "keteranganLainnya": "Keterangan Test"
+}

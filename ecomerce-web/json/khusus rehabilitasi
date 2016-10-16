@@ -1,0 +1,42 @@
+http://localhost:8080/ecomerce-web/service/list-generic/?view=PapPenanggungJawab&select=*
+http://localhost:8080/ecomerce-web/service/list-generic/?view=PapProsedure&select=*
+
+post : http://localhost:8888/ecomerce-web/rehabilitasi/save-rehabilitasi
+
+{
+      "masalahMedisDanRehabilitasi": "1111",
+      "tglInput": "1466322336000",
+      "tujuanRehabilitasiMedis": "1111",
+      "papProsedurePenanggungJawabSet": [{
+          "papPenanggungJawab" : {
+              "id" : "1"
+          },
+          "papProsedure" : {
+              "id" : "1"
+          }
+      }],
+      "prognosis": "111",
+      "pasien": {
+        "kdProfile": 0,
+        "id": 529,
+        "noRec": "                                ",
+        "reportDisplay": "bbbbbbb",
+        "namaExternal": "aaaaaaaa",
+        "umurPasien": "24 Tahun 10 Bulan 3 Hari",
+        "alergi": "Udang",
+        "alamatPasien": "Komp. Batu Regency no 12",
+        "bankRekeningAtasNama": "",
+        "bankRekeningNama": "",
+        "jenisPembayaran": "BPJS",
+        "bankRekeningNomor": "",
+        "isTemporary": 1,
+        "noCm": "0000001",
+        "noCmAyah": "",
+        "noCmIbu": "",
+        "namaPasien": "Susi",
+        "noCmSuamiIstri": "",
+        "noIdentitas": "",
+        "tglKeluhan": 1466322336000,
+        "keluhanUtama": "dsfdsfsdf"
+      }
+    }

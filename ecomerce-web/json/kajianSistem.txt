@@ -1,0 +1,52 @@
+http://localhost:8080/ecomerce-web/pra-anestesi-dokter/save-kajian-sistem/
+{
+    
+    "hilangnyaGigi":{
+        "id":1
+    },
+    "mobilisasiLeher":{
+        "id":1
+    },
+    "leherPendek":{
+        "id":1
+    },
+    "batuk":{
+        "id":1
+    },
+    "sesakNafas":{
+        "id":1
+    },
+    "infeksi":{
+        "id":1
+    },
+    "sakitDada":{
+        "id":1
+    },
+    "denyutTdkNormal":{
+        "id":2
+    },
+    "muntah":{
+        "id":2
+    },
+    "pingsan":{
+        "id":2
+    },
+    "kejang":{
+        "id":2
+    },
+    "hamil":{
+        "id":2
+    },
+    "kelainanTulangBelakang":{
+        "id":1
+    },
+    "obesitas":{
+        "id":1
+    },
+    "keterangan":"Lumayan Baik",
+    "praAnestesiDokter": {
+        "noRec":"2c909071562b19cb01562b1e808d0000"
+        
+    }
+    
+}

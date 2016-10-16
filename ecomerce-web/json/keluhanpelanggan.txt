@@ -1,0 +1,21 @@
+SAVE : http://localhost:9090/ecomerce-web/keluhan-pelanggan/save-keluhan-pelanggan/
+JSON : 
+{
+   "saran": "Mohon dibersihkan",
+   "namaPasien": "John Doe",
+   "keluhan": "Ruangan Tidak Bersih",
+   "email": "john.doe@email.com",
+   "ruangan": {
+       "id": "1"
+   },
+   "noTlp": "021-210 2201",
+   "noRm": "000000000000001",
+   "alamat": "Jakarta Barat",
+   "pekerjaan": {
+       "id": "2"
+   }
+}
+
+FIND ALL : http://localhost:9090/ecomerce-web/keluhan-pelanggan/find-all-keluhan-pelanggan/
+
+FIND ALL GENERIK : http://localhost:9090/ecomerce-web/service/list-generic/?view=KeluhanPelanggan&select=*

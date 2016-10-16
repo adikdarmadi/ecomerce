@@ -1,0 +1,56 @@
+POST : http://localhost:9090/ecomerce-web/dokumen-internal/save-dokumen-internal/
+
+Json : 
+{
+  "alamatPengirim": "Jalan Sindang Sari",
+  "tipePengirimSurat": {
+    "id": "1"
+  },
+  "tglTerima": "12/03/2012",
+  "lampiranPerihal": 3,
+  "statusKeaktifanJenisArsip": {
+    "id": "1"
+  },
+  "perihal": "Surat Masuk Internal",
+  "subKlasifikasiArsip": {
+    "id": "1"
+  },
+  "loginUserPenerimaSurat": {
+    "id": "1"
+  },
+  "ruanganPenerima": {
+    "id": "1"
+  },
+  "keteranganlainnya": "Ini Keterangan surat masuk internal",
+  "keterangan": "Ini Keterangan surat masuk internal ye",
+  "userPegawaiTujuan": {
+    "id": "1"
+  },
+  "statusBerkas": {
+    "id": "1"
+  },
+  "kdruangantujuan": {
+    "id": "2"
+  },
+  "userPegawaiPengirim" : {
+      "id" : 1
+  },
+  "ruanganPengirim" : {
+      "id" : 1
+  },
+  "tanggalSurat" : 0,
+  "nodokumen_intern": "123asdfdse",
+  "nomorSuratInternal" : "1321dsad",
+  "sifatSurat": {
+    "id": "1"
+  },
+  "klasifikasiArsip": {
+    "id": "1"
+  },
+  "qtyPerihal" : 13,
+  "pegawaiPengirimSurat": {
+    "id": "1"
+  }
+}
+
+FETCH DATA : http://localhost:9090/ecomerce-web/dokumen-internal/get-dokumen-by?dateStart=2016-08-31&dateEnd=2016-09-01&noTerima=0001

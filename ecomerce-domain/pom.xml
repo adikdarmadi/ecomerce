@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ecomerce-domain</artifactId>
+	<parent>
+		<groupId>com.ecomerce</groupId>
+		<artifactId>MainEcomerce</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../MainEcomerce/pom.xml</relativePath>
+	</parent>
+	<dependencies>
+ 		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-envers</artifactId>
+            <version>${org.hibernate.version}</version>
+        </dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ecomerce-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- jackson lib -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson2.version}</version>
+		</dependency>
+
+
+
+	</dependencies>
+	<organization>
+		<name>Jasa Medika</name>
+	</organization>
+	<build>
+		<finalName>ecomerce-domain</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<description>Module MainEcomerce untuk Domain Aplikasi -&gt; Entities dan Virtual Object (VO)</description>
+</project>

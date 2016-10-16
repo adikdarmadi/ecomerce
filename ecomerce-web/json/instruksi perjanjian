@@ -1,0 +1,43 @@
+{
+      "kasusPenyakit": {
+        "kasusPenyakit": "",
+        "id": "1",
+        "kdProfile": "",
+        "namaExternal": "",
+        "kodeExsternal": "",
+        "noRec": "",
+        "statusEnabled": "",
+        "pelayananProfileId": "",
+        "qKasusPenyakit": "",
+        "kdKasusPenyakit": "",
+        "pelayananProfile": {},
+        "reportDisplay": ""
+      },
+      "tglInput": "1466355600000",
+      "tglPerjanjian": "1466355600000",
+      "statusEnabled": "",
+      "pasien": {
+        "kdProfile": 0,
+        "id": 177,
+        "noRec": "                                ",
+        "reportDisplay": "bbbbbbb",
+        "namaExternal": "aaaaaaaa",
+        "umurPasien": "24 Tahun 10 Bulan 3 Hari",
+        "alergi": "Udang",
+        "alamatPasien": "Komp. Batu Regency no 12",
+        "bankRekeningAtasNama": "",
+        "bankRekeningNama": "",
+        "jenisPembayaran": "BPJS",
+        "bankRekeningNomor": "",
+        "isTemporary": 1,
+        "noCm": "0000001",
+        "noCmAyah": "",
+        "noCmIbu": "",
+        "namaPasien": "Susi",
+        "noCmSuamiIstri": "",
+        "noIdentitas": "",
+        "tglKeluhan": 1466322336000,
+        "keluhanUtama": "dsfdsfsdf"
+      },
+      "keteranganLainnya": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }

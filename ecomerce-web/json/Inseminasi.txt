@@ -1,0 +1,37 @@
+http://localhost:8080/ecomerce-web/inseminasi/save-inseminasi/
+
+{
+     "kdProfile": 1,
+      "statusEnabled": false,
+      "noRec": "",
+      "pasienDaftar": {
+        "kdProfile": 0,
+        "noRec": "40288cc255a0b1110155a0b58bef0012"
+      },
+       "pasien": {
+          "kdProfile": 0,
+          "id": 393
+       },
+        "pengeluaranSperma": {
+        "kdProfile": 1,
+        "statusEnabled": false,
+        "id": 1
+        },
+         "reinseminasi": {
+        "kdProfile": 1,
+        "statusEnabled": true,
+        "id": 1
+         },
+          "volum": 34,
+      "konsentrasi": 12,
+      "motilitas1": 1,
+      "motilitas2": 1,
+      "motilitas3": 1,
+      "motilitas4": 1,
+      "morfologi": 1,
+      "konsentrasiSesudahPreparasi": 12,
+      "jumlahSperma": 12,
+      "volume": 45,
+      "tanggal": 1355245200000,
+      "catatan": "aaaa"
+}
