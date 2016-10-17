@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FooLiveTest" project="spring-security-rest" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="org.baeldung.web.FooLiveTest" time="2.537">
+    <testcase name="whenSendInvalidHttpMediaType_thenUnsupportedMediaType" classname="org.baeldung.web.FooLiveTest" time="2.358"/>
+    <testcase name="whenTry_thenOK" classname="org.baeldung.web.FooLiveTest" time="0.058"/>
+    <testcase name="whenHttpRequestMethodNotSupported_thenMethodNotAllowed" classname="org.baeldung.web.FooLiveTest" time="0.041"/>
+    <testcase name="whenMethodArgumentMismatch_thenBadRequest" classname="org.baeldung.web.FooLiveTest" time="0.046"/>
+    <testcase name="whenNoHandlerForHttpRequest_thenNotFound" classname="org.baeldung.web.FooLiveTest" time="0.034"/>
+  </testsuite>
+</testrun>

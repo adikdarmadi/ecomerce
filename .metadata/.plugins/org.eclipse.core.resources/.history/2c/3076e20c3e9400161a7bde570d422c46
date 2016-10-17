@@ -1,0 +1,170 @@
+package com.jasamedika.medifirst2000.service.impl;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.orm.jpa.JpaSystemException;
+import org.springframework.stereotype.Service;
+
+import com.jasamedika.medifirst2000.converter.BaseConverterImpl;
+import com.jasamedika.medifirst2000.dao.LaporanUjiHasilDao;
+import com.jasamedika.medifirst2000.dao.custom.LaporanUjiHasilDaoCustom;
+import com.jasamedika.medifirst2000.entities.BakuMutu;
+import com.jasamedika.medifirst2000.entities.LaporanUjiHasil;
+import com.jasamedika.medifirst2000.entities.MapParameterToLaporanUjiHasil;
+import com.jasamedika.medifirst2000.entities.Parameter;
+import com.jasamedika.medifirst2000.entities.PemakaianAirBersih;
+import com.jasamedika.medifirst2000.entities.SatuanStandar;
+import com.jasamedika.medifirst2000.exception.ServiceVOException;
+import com.jasamedika.medifirst2000.service.LaporanUjiHasilService;
+import com.jasamedika.medifirst2000.service.StrukKirimService;
+import com.jasamedika.medifirst2000.util.CommonUtil;
+import com.jasamedika.medifirst2000.vo.BakuMutuVO;
+import com.jasamedika.medifirst2000.vo.LaporanUjiHasilVO;
+import com.jasamedika.medifirst2000.vo.MapParameterToLaporanUjiHasilVO;
+import com.jasamedika.medifirst2000.vo.ParameterVO;
+import com.jasamedika.medifirst2000.vo.SatuanStandarVO;
+
+@Service("LaporanUjiHasilService")
+public class LaporanUjiHasilServiceImpl extends BaseVoServiceImpl implements LaporanUjiHasilService<LaporanUjiHasilVO> {
+
+	@Autowired
+	private LaporanUjiHasilDao laporanUjiHasilDao;
+	
+	@Autowired
+	private LaporanUjiHasilDaoCustom laporanUjiHasilDaoCustom;
+	
+	@Autowired
+	private StrukKirimService strukKirimService;
+	
+	@Autowired
+	private BaseConverterImpl<LaporanUjiHasilVO, LaporanUjiHasil> laporanUjiHasilConverter;
+	
+	@Autowired
+	private BaseConverterImpl<MapParameterToLaporanUjiHasilVO, MapParameterToLaporanUjiHasil> mapParameterToLaporanUjiHasilConverter;
+	
+	@Autowired
+	private BaseConverterImpl<ParameterVO, Parameter> parameterConverter;
+	
+	@Autowired
+	private BaseConverterImpl<SatuanStandarVO, SatuanStandar> satuanStandarConverter;
+	
+	@Autowired
+	private BaseConverterImpl<BakuMutuVO, BakuMutu> bakuMutuConverter;
+	
+	@Override
+	public Map<String,Object> addLaporanUjiHasil(LaporanUjiHasilVO vo) {
+
+		LaporanUjiHasil laporanUjiHasil=new LaporanUjiHasil();
+				
+		if(CommonUtil.isNotNullOrEmpty(vo)){
+			laporanUjiHasil=laporanUjiHasilConverter.transferVOToModel(vo, new LaporanUjiHasil());
+		}
+		
+		if(CommonUtil.isNotNullOrEmpty(vo.getMapParameterToLaporanUjiHasil())){
+			Set<MapParameterToLaporanUjiHasil> list = new HashSet<MapParameterToLaporanUjiHasil>();
+			for(MapParameterToLaporanUjiHasilVO models : vo.getMapParameterToLaporanUjiHasil()){
+				MapParameterToLaporanUjiHasil model = mapParameterToLaporanUjiHasilConverter.transferVOToModel(models, new MapParameterToLaporanUjiHasil());
+				if(CommonUtil.isNotNullOrEmpty(models.getParameter())){
+					model.setParameter(parameterConverter.transferVOToModel(models.getParameter(), new Parameter()));
+				}
+				if(CommonUtil.isNotNullOrEmpty(models.getSatuanStandar())){
+					model.setSatuanStandar(satuanStandarConverter.transferVOToModel(models.getSatuanStandar(), new SatuanStandar()));
+				}
+				if(CommonUtil.isNotNullOrEmpty(models.getBakuMutu())){
+					model.setBakuMutu(bakuMutuConverter.transferVOToModel(models.getBakuMutu(), new BakuMutu()));
+				}
+				model.setLaporanUjiHasil(laporanUjiHasil);;
+				list.add(model);
+			}
+			laporanUjiHasil.setMapParameterToLaporanUjiHasil(list);
+		}
+		
+		LaporanUjiHasil laporanUjiHasilResult = laporanUjiHasilDao.save(laporanUjiHasil);
+		
+		Map<String,Object> result=new HashMap<String,Object>();
+		
+		if (CommonUtil.isNotNullOrEmpty(laporanUjiHasilResult)) {
+			result.put("noRec", laporanUjiHasilResult.getNoRec());
+		}
+		
+		return result;
+		
+	}
+	
+	
+	@Override
+	public Map<String, Object> findLaporanUjiHasilByPeriode(Integer page, Integer limit, String sort, String dir, String dateStart,String dateEnd) {
+		
+		int totalRow = laporanUjiHasilDaoCustom.findCount(sort, dateStart, dateEnd);
+		int totalPages = 0;
+
+		int pageRequested = page;
+
+		if (totalRow > 0) {
+			totalPages = (int) Math.ceil((double) totalRow / (double) limit);
+		} else {
+			totalPages = 0;
+		}
+
+		if (pageRequested > totalPages)
+			pageRequested = totalPages;
+		int rowStart = pageRequested * limit - limit;
+		if (rowStart < 0) {
+			rowStart = 0;
+		}
+		int rowEnd = limit;
+		Map<String, Object> result=new HashMap<String,Object>();
+		result.put("data", laporanUjiHasilDaoCustom.findList(rowStart, rowEnd, sort, dir, dateStart, dateEnd));
+		result.put("totalPages", totalPages);
+		result.put("totalRow", totalRow);
+		return result;
+	}
+	
+	@Override
+	public LaporanUjiHasilVO add(LaporanUjiHasilVO vo) throws JpaSystemException, ServiceVOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LaporanUjiHasilVO update(LaporanUjiHasilVO vo) throws JpaSystemException, ServiceVOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean delete(String key) throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LaporanUjiHasilVO findById(String key) throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LaporanUjiHasilVO> findAll() throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Object> findAllWithPageAndLimitAndSortByAndDirectionParameter(Integer page, Integer limit,
+			String sort, String dir) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

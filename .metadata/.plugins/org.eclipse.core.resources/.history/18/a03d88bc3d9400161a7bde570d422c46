@@ -1,0 +1,124 @@
+package com.jasamedika.medifirst2000.entities;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.jasamedika.medifirst2000.base.BaseTransaction;
+import com.jasamedika.medifirst2000.helper.Caption;
+
+@Entity
+@Table(name = "LaporanUjiHasil_T")
+public class LaporanUjiHasil extends BaseTransaction {
+	
+	@Column(name = "NomorContoh", nullable = true, columnDefinition="TEXT")
+	@Caption(value="Nomor contoh")
+	private String nomorContoh;
+	
+	@Column(name = "uraianContoh", nullable = true, columnDefinition="TEXT")
+	@Caption(value="Uraian Contoh")
+	private String uraianContoh;
+	
+	@Column(name = "TanggalPenerimaanContoh", nullable = true)
+	@Caption(value = "Tanggal penerimaan contoh")
+	private Date tanggalPenerimaanContoh;
+
+	@Column(name = "TanggalPengujianContohFrom", nullable = true)
+	@Caption(value = "Tanggal penerimaan contoh from")
+	private Date tanggalPengujianContohFrom;
+	
+	@Column(name = "TanggalPengujianContohTo", nullable = true)
+	@Caption(value = "Tanggal penerimaan contoh to")
+	private Date tanggalPengujianContohTo;
+	
+	
+	@JsonManagedReference
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "laporanUjiHasil")
+	@Caption(value = "map parameter to laporan uji hasil")
+	private Set<MapParameterToLaporanUjiHasil> mapParameterToLaporanUjiHasil = new HashSet<MapParameterToLaporanUjiHasil>();
+	
+	@ManyToOne
+	@JoinColumn(name = "ObjectRekananFk")
+	@Caption(value="PT")
+	private Rekanan rekanan;
+	
+	@Column(name = "ObjectRekananFk", insertable = false, updatable = false, nullable = true)
+	private Integer rekananId;
+	
+	public String getNomorContoh() {
+		return nomorContoh;
+	}
+
+	public void setNomorContoh(String nomorContoh) {
+		this.nomorContoh = nomorContoh;
+	}
+
+	public Date getTanggalPenerimaanContoh() {
+		return tanggalPenerimaanContoh;
+	}
+
+	public void setTanggalPenerimaanContoh(Date tanggalPenerimaanContoh) {
+		this.tanggalPenerimaanContoh = tanggalPenerimaanContoh;
+	}
+
+	public Date getTanggalPengujianContohTo() {
+		return tanggalPengujianContohTo;
+	}
+
+	public void setTanggalPengujianContohTo(Date tanggalPengujianContohTo) {
+		this.tanggalPengujianContohTo = tanggalPengujianContohTo;
+	}
+
+
+	public Set<MapParameterToLaporanUjiHasil> getMapParameterToLaporanUjiHasil() {
+		return mapParameterToLaporanUjiHasil;
+	}
+
+	public void setMapParameterToLaporanUjiHasil(Set<MapParameterToLaporanUjiHasil> mapParameterToLaporanUjiHasil) {
+		this.mapParameterToLaporanUjiHasil = mapParameterToLaporanUjiHasil;
+	}
+
+	public String getUraianContoh() {
+		return uraianContoh;
+	}
+
+	public void setUraianContoh(String uraianContoh) {
+		this.uraianContoh = uraianContoh;
+	}
+
+	public Date getTanggalPengujianContohFrom() {
+		return tanggalPengujianContohFrom;
+	}
+
+	public void setTanggalPengujianContohFrom(Date tanggalPengujianContohFrom) {
+		this.tanggalPengujianContohFrom = tanggalPengujianContohFrom;
+	}
+
+	public Rekanan getRekanan() {
+		return rekanan;
+	}
+
+	public void setRekanan(Rekanan rekanan) {
+		this.rekanan = rekanan;
+	}
+
+	public Integer getRekananId() {
+		return rekananId;
+	}
+
+	public void setRekananId(Integer rekananId) {
+		this.rekananId = rekananId;
+	}
+	
+
+}

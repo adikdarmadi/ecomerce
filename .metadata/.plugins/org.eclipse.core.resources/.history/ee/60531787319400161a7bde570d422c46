@@ -1,0 +1,134 @@
+package com.jasamedika.medifirst2000.dao.custom;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.jasamedika.medifirst2000.dao.custom.base.impl.CoreDaoImpl;
+import com.jasamedika.medifirst2000.dto.DetailRupDto;
+import com.jasamedika.medifirst2000.entities.DetailRup;
+import com.jasamedika.medifirst2000.entities.DetailSpekAnggaran;
+import com.jasamedika.medifirst2000.util.CommonUtil;
+import com.jasamedika.medifirst2000.util.DateUtil;
+
+/**
+ * Repository Custom class
+ * 
+ * @author Adik
+ * @param <T>
+ */
+@Repository
+public class DetailRupDaoCustomImpl extends CoreDaoImpl<DetailRup> implements DetailRupDaoCustom {
+
+	public DetailRupDaoCustomImpl() {
+		super(DetailRup.class);
+	}
+
+	@Override
+	public List<DetailRupDto> findDetailRup(int rowStart, int rowEnd, String sort,String dir, String dateStart, String dateEnd, Integer pengendaliId) {
+
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Select NEW com.jasamedika.medifirst2000.dto.DetailRupDto(spek,rup) from DetailRup rup right join rup.detailSpekAnggaran spek where spek.isActive=true and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null ");
+		if(CommonUtil.isNotNullOrEmpty(dateStart) && CommonUtil.isNotNullOrEmpty(dateEnd)){
+			buffer.append("and date(spek.detailAnggaran.tanggalPengajuan) >= :dateStart and date(spek.detailAnggaran.tanggalPengajuan) <= :dateEnd ");
+		}
+		
+		if(CommonUtil.isNotNullOrEmpty(pengendaliId)){
+			buffer.append("and spek.pengendali.id =:pengendaliId ");
+		}	
+		
+		if (sort != "") {
+			buffer.append("order by spek." + sort + " " + dir);
+		} else {
+			buffer.append("order by spek.noRec desc ");
+		}
+		Query query = em.createQuery(buffer.toString());
+		if(CommonUtil.isNotNullOrEmpty(dateStart) && CommonUtil.isNotNullOrEmpty(dateEnd)){
+			query.setParameter("dateStart",DateUtil.toDate(dateStart));
+			query.setParameter("dateEnd", DateUtil.toDate(dateEnd));
+		}
+		
+		if(CommonUtil.isNotNullOrEmpty(pengendaliId)){
+			query.setParameter("pengendaliId", pengendaliId);
+		}	
+		query.setFirstResult(rowStart);
+		query.setMaxResults(rowEnd);
+		List<DetailRupDto> list = query.getResultList();
+
+		return list;
+	}
+
+	@Override
+	public Integer findDetailRupCount(String sort, String dateStart, String dateEnd, Integer pengendaliId) {
+
+		StringBuffer buffer = new StringBuffer();
+			buffer.append("Select count(spek) from  DetailRup rup right join rup.detailSpekAnggaran spek where spek.isActive=true and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null ");
+		if(CommonUtil.isNotNullOrEmpty(dateStart) && CommonUtil.isNotNullOrEmpty(dateEnd)){
+			buffer.append("and spek.detailAnggaran.tanggalPengajuan >= :dateStart and spek.detailAnggaran.tanggalPengajuan <= :dateEnd ");
+		}
+		
+		if(CommonUtil.isNotNullOrEmpty(pengendaliId)){
+			buffer.append("and spek.pengendali.id =:pengendaliId ");
+		}		
+		Query query = em.createQuery(buffer.toString());
+		if(CommonUtil.isNotNullOrEmpty(dateStart) && CommonUtil.isNotNullOrEmpty(dateEnd)){
+			query.setParameter("dateStart",DateUtil.toDate(dateStart));
+			query.setParameter("dateEnd", DateUtil.toDate(dateEnd));
+		}
+		
+		if(CommonUtil.isNotNullOrEmpty(pengendaliId)){
+			query.setParameter("pengendaliId", pengendaliId);
+		}	
+
+		return ((Long) query.getSingleResult()).intValue();
+
+	}
+	
+	@Override
+	public List<DetailRupDto> findByNoRec(List<String> noRec) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Select NEW com.jasamedika.medifirst2000.dto.DetailRupDto(spek,rup) from DetailRup rup right join rup.detailSpekAnggaran spek where spek.noRec is not null");
+		buffer.append(" and spek.noRec in (:noRec) and spek.isActive=true  and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null ");
+		
+		Query query = em.createQuery(buffer.toString());
+		query.setParameter("noRec", noRec);
+		return query.getResultList();
+	}
+	
+	/*@Override
+	public List<DetailRupDto> findBySpek(String noRec) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Select NEW com.jasamedika.medifirst2000.dto.DetailRupDto(spek,rup) from DetailRup rup left join rup.detailSpekAnggaran spek where spek.noRec is not null");
+		buffer.append(" and spek.detailSpekAnggaran.noRec=:noRec and spek.isActive=true  and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null ");
+	
+		Query query = em.createQuery(buffer.toString());
+		query.setParameter("noRec", noRec);
+		return query.getResultList();
+	}
+	
+	@Override
+	public List<DetailRupDto> findByDetail(String noRec) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Select NEW com.jasamedika.medifirst2000.dto.DetailRupDto(spek,rup) from DetailRup rup left join rup.detailSpekAnggaran spek where spek.noRec is not null");
+		buffer.append(" and spek.detailAnggaran.noRec=:noRec and spek.isActive=true and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null  ");
+	
+		Query query = em.createQuery(buffer.toString());
+		query.setParameter("noRec", noRec);
+		return query.getResultList();
+	}
+	
+	@Override
+	public List<DetailRupDto> findByKegiatan(String noRec) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("Select NEW com.jasamedika.medifirst2000.dto.DetailRupDto(spek,rup) from DetailRup rup left join rup.detailSpekAnggaran spek where spek.noRec is not null");
+		buffer.append(" and spek.detailAnggaran.kegiatanAnggaran.noRec=:noRec and spek.isActive=true  and spek.isVerifikasi=true and spek.detailSpekAnggaran is not null ");
+	
+		Query query = em.createQuery(buffer.toString());
+		query.setParameter("noRec", noRec);
+		return query.getResultList();
+	}
+*/
+}

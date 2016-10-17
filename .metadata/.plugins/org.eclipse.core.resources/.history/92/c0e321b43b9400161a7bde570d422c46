@@ -1,0 +1,48 @@
+package com.jasamedika.medifirst2000.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+
+import com.jasamedika.medifirst2000.entities.HasilTriase;
+import com.jasamedika.medifirst2000.entities.PemakaianAirBersih;
+import com.jasamedika.medifirst2000.entities.Produk;
+import com.jasamedika.medifirst2000.entities.StrukPelayanan;
+import com.jasamedika.medifirst2000.entities.StrukPelayananDetail;
+
+/**
+ * @author Shakato
+ */
+@Repository("StrukPelayananDao")
+public interface StrukPelayananDao extends PagingAndSortingRepository<StrukPelayanan, String> {
+	
+//	@Query("select model from StrukPelayananDetail detail join fetch detail.nostruk model where model.kdkelompoktransaksi.id = (Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdLimbahInStruk')")
+//	List<StrukPelayananDetail> findStrukLimbahMasuk();
+	
+	@Query("select t from StrukPelayananDetail t join t.nostruk model where model.kdkelompoktransaksi.id = (Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdLimbahInStruk')")
+	List<StrukPelayananDetail> findStrukLimbahMasuk();
+	
+//	@Query("select SUM(model.qtyproduk) from StrukPelayanan model where date(model.tglstruk) between date(:periodeAwal) and date(:periodeAkhir)")
+//	public Double getToftalBeratLimbahB3MasukByPeriode(@Param("periodeAwal") String periodeAwal,
+//			@Param("periodeAkhir") String periodeAkhir);
+	
+	@Query("select SUM(model.qtyproduk) from StrukPelayanan model where date(model.tglstruk) between date(:periodeAwal) and date(:periodeAkhir) and  model.jenisLimbahB3Masuk.id=:jenisLimbahB3Masuk and model.kdkelompoktransaksi = (Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdTransaksiKeslingInStrukPelayanan') ")
+	public Double getTotalBeratLimbahB3MasukByPeriode(@Param("periodeAwal") String periodeAwal,@Param("periodeAkhir") String periodeAkhir,@Param("jenisLimbahB3Masuk") Integer jenisLimbahB3Masuk);
+
+	@Query("select new map(limbah.id as jenisLimbahB3Masuk,limbah.jenisLimbahB3masuk as limbag,SUM(model.qtyproduk) as total) from StrukPelayanan model left join model.jenisLimbahB3Masuk limbah where date(model.tglstruk) between  date(:periodeAwal) and date(:periodeAkhir) and model.kdkelompoktransaksi = (Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdTransaksiKeslingInStrukPelayanan') group by limbah.id,limbah.jenisLimbahB3masuk")
+	public List<Map<String,Object>> getTotalBeratLimbahB3MasukByPeriodeList(@Param("periodeAwal") String periodeAwal,@Param("periodeAkhir") String periodeAkhir);
+
+	@Query("select  coalesce(SUM(model.qtyproduk),0.0)  from StrukPelayanan model left join model.jenisLimbahB3Masuk limbah where date(model.tglstruk) between  periodeAwal and periodeAkhir and model.kdkelompoktransaksi = (Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdTransaksiKeslingInStrukPelayanan') ")
+	public Double getTotalBeratLimbahB3MasukByPeriode(@Param("periodeAwal") String periodeAwal,@Param("periodeAkhir") String periodeAkhir);
+
+	
+//	@Query("Select cast(s.nilaiField as int) from  SettingDataFixed s where s.namaField='KdTransaksiKeslingInStrukPelayanan'")
+//	public Integer getKdTransaksiKesling();
+	
+	
+}

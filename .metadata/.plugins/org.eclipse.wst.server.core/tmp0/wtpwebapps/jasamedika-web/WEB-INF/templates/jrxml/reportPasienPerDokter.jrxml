@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportPasienPerDokter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20ce236d-95d4-4610-94cb-142ff5b6e518">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="bulan" class="java.lang.String"/>
+	<parameter name="tahun" class="java.lang.String"/>
+	<parameter name="tanggalReport" class="java.lang.String"/>
+	<parameter name="ruangan" class="java.lang.String"/>
+	<parameter name="kelas" class="java.lang.String"/>
+	<parameter name="nama" class="java.lang.String"/>
+	<parameter name="nip" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="154" splitType="Stretch">
+			<image>
+				<reportElement x="118" y="0" width="400" height="53" uuid="6bcdc99a-4eb0-4b57-b351-0e2c2055ec3f"/>
+				<imageExpression><![CDATA["C:\\harkit_report\\master\\images\\logoHarkit.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="53" width="554" height="17" uuid="d3081368-5dca-4e93-aac5-e35f7c97afb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Jl. Letjend. S. Parman Kav. 87, Slipi,Jakarta Barat 11420 – Indonesia, Telp 021 5668284]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="84" width="554" height="20" uuid="62949cc0-2646-4a90-b8fc-1538f73de471"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH PASIEN PADA SETIAP DOKTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="104" width="554" height="20" uuid="69b45379-f09b-449a-af04-1d209aa0a8b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTALASI RAWAT INAP]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

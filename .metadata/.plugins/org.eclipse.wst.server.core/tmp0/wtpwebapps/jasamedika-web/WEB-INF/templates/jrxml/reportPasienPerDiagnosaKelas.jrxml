@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportPasienPerDiagnosaKelas" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c81db13c-7e60-4d3b-916e-8ff6030821cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="bulan" class="java.lang.String"/>
+	<parameter name="tahun" class="java.lang.String"/>
+	<parameter name="tanggalReport" class="java.lang.String"/>
+	<parameter name="ruangan" class="java.lang.String"/>
+	<parameter name="kelas" class="java.lang.String"/>
+	<parameter name="nama" class="java.lang.String"/>
+	<parameter name="nip" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="151" splitType="Stretch">
+			<image>
+				<reportElement x="242" y="1" width="400" height="53" uuid="8db61e7c-4be3-4e1d-8f4d-42288737a937"/>
+				<imageExpression><![CDATA["C:\\harkit_report\\master\\images\\logoHarkit.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="2" y="54" width="802" height="17" uuid="291da8db-d258-45e8-9513-dc3320cd3ba8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Jl. Letjend. S. Parman Kav. 87, Slipi,Jakarta Barat 11420 – Indonesia, Telp 021 5668284]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="103" width="802" height="20" uuid="91328f69-7ced-49ae-92e9-504c3fbc61ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTALASI RAWAT INAP IBU RSAB HARAPAN KITA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="123" width="802" height="20" uuid="345a6cbf-4c82-4c1c-a028-f9a9b595d3e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["LAPORAN BULAN " +$P{bulan}+" "+$P{tahun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="83" width="802" height="20" uuid="0d9e4fd1-f3f6-4b5e-bcbd-248c39986be2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH PASIEN DENGAN DIAGNOSA, PADA SETIAP DOKTER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

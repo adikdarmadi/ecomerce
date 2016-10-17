@@ -1,0 +1,145 @@
+package com.jasamedika.medifirst2000.service.impl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.jpa.JpaSystemException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.jasamedika.medifirst2000.dao.LimbahB3MasukDao;
+import com.jasamedika.medifirst2000.dao.StrukPelayananDao;
+import com.jasamedika.medifirst2000.dao.custom.LimbahB3KeluarDaoCustom;
+import com.jasamedika.medifirst2000.dao.custom.LimbahB3MasukDaoCustom;
+import com.jasamedika.medifirst2000.entities.StrukPelayanan;
+import com.jasamedika.medifirst2000.entities.StrukPelayananDNoBatch;
+import com.jasamedika.medifirst2000.entities.StrukPelayananDetail;
+import com.jasamedika.medifirst2000.exception.ServiceVOException;
+import com.jasamedika.medifirst2000.service.LimbahB3MasukService;
+import com.jasamedika.medifirst2000.service.StrukPelayananService;
+import com.jasamedika.medifirst2000.util.CommonUtil;
+import com.jasamedika.medifirst2000.vo.LimbahB3MasukVO;
+import com.jasamedika.medifirst2000.vo.StrukPelayananVO;
+
+@Service("LimbahB3MasukService")
+public class LimbahB3MasukServiceImpl extends BaseVoServiceImpl implements LimbahB3MasukService<LimbahB3MasukVO> {
+
+	@Autowired
+	private StrukPelayananService strukPelayananService;
+	
+	@Autowired
+	private StrukPelayananDao strukPelayananDao;
+	
+	
+	@Autowired
+	private LimbahB3KeluarDaoCustom limbahB3KeluarDaoCustom;
+	
+	@Autowired
+	private LimbahB3MasukDaoCustom limbahB3MasukDaoCustom;
+	
+	@Override
+	@Transactional(readOnly = false)
+	public Map<String, Object> saveLimbahB3Masuk(LimbahB3MasukVO vo) throws IllegalAccessException {
+		
+		// save strukPelayanan
+		StrukPelayanan resultStrukPelayanan =  strukPelayananService.saveStrukPelayananService(vo.getStrukPelayanan());
+		StrukPelayananDetail resultStrukPelayananDetail = strukPelayananService.saveStrukPelayananDetailKesling(vo.getStrukPelayananDetail(), resultStrukPelayanan);
+		Map<String,Object>resultMessage=new HashMap<String,Object>();
+		resultMessage.put("norecStrukPelayanan", resultStrukPelayanan.getNoRec());
+		//resultMessage.put("norecStrukPelayananDetail", resultStrukPelayananDetail.getNoRec());
+		
+		return resultMessage;
+	}
+	
+	@Override
+	public Map<String, Double> getTotalBeratLimbah(String periodeAwal, String periodeAkhir,Integer jenisLimbahB3Masuk){
+		Map<String,Double> result=new HashMap<String,Double>();
+		Double resultModel;
+		resultModel = strukPelayananDao.getTotalBeratLimbahB3MasukByPeriode(periodeAwal, periodeAkhir,jenisLimbahB3Masuk);
+		System.out.print("\n hasil total" + resultModel);
+		if(CommonUtil.isNotNullOrEmpty(resultModel)){
+			result.put("total", resultModel);
+		}
+		return result;
+		
+	}
+
+	@Override
+	public LimbahB3MasukVO add(LimbahB3MasukVO vo) throws JpaSystemException, ServiceVOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LimbahB3MasukVO update(LimbahB3MasukVO vo) throws JpaSystemException, ServiceVOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean delete(String key) throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LimbahB3MasukVO findById(String key) throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LimbahB3MasukVO> findAll() throws JpaSystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Object> findAllWithPageAndLimitAndSortByAndDirectionParameter(Integer page, Integer limit,
+			String sort, String dir) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getTotalBeratLimbahList(String periodeAwal, String periodeAkhir) {
+		// TODO Auto-generated method stub
+		return strukPelayananDao.getTotalBeratLimbahB3MasukByPeriodeList(periodeAwal, periodeAkhir);
+	}
+
+	
+	@Override
+	public Map<String, Object> lisLimbahB3Masuk(Integer page, Integer limit, String sort, String dir, String dateStart,String dateEnd, Integer jenisLimbah) {
+		
+		int totalRow = limbahB3MasukDaoCustom.findCount(sort, dateStart, dateEnd, jenisLimbah);
+		int totalPages = 0;
+
+		int pageRequested = page;
+
+		if (totalRow > 0) {
+			totalPages = (int) Math.ceil((double) totalRow / (double) limit);
+		} else {
+			totalPages = 0;
+		}
+
+		if (pageRequested > totalPages)
+			pageRequested = totalPages;
+		int rowStart = pageRequested * limit - limit;
+		if (rowStart < 0) {
+			rowStart = 0;
+		}
+		int rowEnd = limit;
+		Map<String, Object> result=new HashMap<String,Object>();
+		result.put("data", limbahB3MasukDaoCustom.findList(rowStart, rowEnd, sort, dir, dateStart, dateEnd, jenisLimbah));
+		result.put("totalPages", totalPages);
+		result.put("totalRow", totalRow);
+		return result;
+	}
+
+
+
+
+
+}
