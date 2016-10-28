@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/media/adikdarmadi/01D22A110F163550/sarprasCloud"/>
 			<item value="D:\ecomerce"/>
 		</list>
 		<list key="projectNameTemplate">

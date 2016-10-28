@@ -2073,3 +2073,504 @@ org.apache.maven.plugin.MojoExecutionException: You need to run build with JDK o
 2016-10-18 04:30:34,112 [Worker-312] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-10-18 04:30:34,115 [Worker-312] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-10-18 04:30:34,157 [Worker-312] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Rc\ecomerce-web-doc\src\test\resources
+2016-10-28 00:10:49,884 [main] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't read workspace state
+java.io.InvalidClassException: org.eclipse.m2e.core.internal.project.registry.BasicProjectRegistry; local class incompatible: stream classdesc serialVersionUID = 6232274446642339434, local class serialVersionUID = 5542512601401896748
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:617) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1622) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1517) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1622) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1517) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1771) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1350) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:370) ~[na:1.7.0_80]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.readWorkspaceState(ProjectRegistryReader.java:100) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.<init>(ProjectRegistryManager.java:160) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.MavenPluginActivator.start(MavenPluginActivator.java:210) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) [na:1.7.0_80]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.7.0_80]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2595) [na:1.7.0_80]
+	at java.lang.Class.getConstructor0(Class.java:2895) [na:1.7.0_80]
+	at java.lang.Class.newInstance(Class.java:354) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:395) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createExecutableExtension(WorkbenchWizardElement.java:123) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createWizard(WorkbenchWizardElement.java:278) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.dialogs.ImportExportPage$1.createWizard(ImportExportPage.java:303) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardNode$1$1.run(WorkbenchWizardNode.java:159) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardNode$1.run(WorkbenchWizardNode.java:141) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardNode.getWizard(WorkbenchWizardNode.java:137) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.jface.wizard.WizardSelectionPage.getNextPage(WizardSelectionPage.java:107) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardSelectionPage.getNextPage(WorkbenchWizardSelectionPage.java:101) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.dialogs.ImportExportPage.getNextPage(ImportExportPage.java:435) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:935) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:434) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4454) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3799) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3409) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.jface.window.Window.open(Window.java:808) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.ui.internal.handlers.WizardHandler$Import.executeHandler(WizardHandler.java:158) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:290) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_80]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_80]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_80]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_80]
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55) [org.eclipse.e4.core.di_1.4.0.v20140414-1837.jar:na]
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:247) [org.eclipse.e4.core.di_1.4.0.v20140414-1837.jar:na]
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:229) [org.eclipse.e4.core.di_1.4.0.v20140414-1837.jar:na]
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132) [org.eclipse.e4.core.contexts_1.3.100.v20140407-1019.jar:na]
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:149) [org.eclipse.e4.core.commands_0.10.2.v20140424-2344.jar:na]
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:499) [org.eclipse.core.commands_3.6.100.v20140528-1422.jar:na]
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508) [org.eclipse.core.commands_3.6.100.v20140528-1422.jar:na]
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210) [org.eclipse.e4.core.commands_0.10.2.v20140424-2344.jar:na]
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:343) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:159) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420) [org.eclipse.jface_3.10.2.v20141021-1035.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4454) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1388) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3799) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3409) [org.eclipse.swt.gtk.linux.x86_64_3.103.2.v20150203-1351.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151) [org.eclipse.e4.ui.workbench.swt_0.12.100.v20141126-1150.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332) [org.eclipse.core.databinding.observable_1.4.1.v20140210-1835.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032) [org.eclipse.e4.ui.workbench.swt_0.12.100.v20141126-1150.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148) [org.eclipse.e4.ui.workbench_1.2.2.v20141212-1259.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332) [org.eclipse.core.databinding.observable_1.4.1.v20140210-1835.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135) [org.eclipse.ui.ide.application_1.0.501.v20141111-1238.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.200.v20130910-1609.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_80]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_80]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_80]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_80]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648) [org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603) [org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465) [org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar:na]
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438) [org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar:na]
+2016-10-28 00:11:08,179 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-domain:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/pom.xml.
+2016-10-28 00:11:09,601 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.ecomerce:MainEcomerce:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/MainEcomerce/pom.xml.
+2016-10-28 00:11:09,926 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-core:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-core/pom.xml.
+2016-10-28 00:11:10,198 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 00:11:10,481 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 00:11:10,598 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 00:11:11,433 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce.medifirst2000:ecomerce-web-doc:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/pom.xml.
+2016-10-28 00:11:16,993 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-config/src/main/java
+2016-10-28 00:11:16,993 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ecomerce-config/src/main/resources
+2016-10-28 00:11:16,994 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-config/src/test/java
+2016-10-28 00:11:17,270 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.ecomerce:MainEcomerce:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/MainEcomerce/pom.xml.
+2016-10-28 00:11:17,297 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-core/src/main/java
+2016-10-28 00:11:17,299 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-core/src/test/java
+2016-10-28 00:11:17,339 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 00:11:17,995 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-domain/src/main/java
+2016-10-28 00:11:17,995 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ecomerce-domain/src/main/resources
+2016-10-28 00:11:17,996 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-domain/src/test/java
+2016-10-28 00:11:18,346 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 00:11:18,387 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-core:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-core/pom.xml.
+2016-10-28 00:11:18,442 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 00:11:18,911 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 00:11:19,017 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 00:11:19,079 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-core:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-core/pom.xml.
+2016-10-28 00:11:19,161 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-domain:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/pom.xml.
+2016-10-28 00:11:19,260 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 00:11:19,389 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce.medifirst2000:ecomerce-web-doc:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/pom.xml.
+2016-10-28 00:11:19,707 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-business/src/main/java
+2016-10-28 00:11:19,707 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-business/target/generated-sources/java
+2016-10-28 00:11:19,708 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ecomerce-business/src/main/resources
+2016-10-28 00:11:19,708 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-business/src/test/java
+2016-10-28 00:11:19,965 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-web/src/main/java
+2016-10-28 00:11:19,965 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ecomerce-web/src/main/resources
+2016-10-28 00:11:19,966 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-web/src/test/java
+2016-10-28 00:11:24,012 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-web-doc/src/main/java
+2016-10-28 00:11:24,012 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ecomerce-web-doc/src/test/java
+2016-10-28 00:11:25,049 [Worker-2] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 7 project(s) in 22 sec
+2016-10-28 00:11:30,698 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:30,702 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-10-28 00:11:30,710 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:30,711 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 00:11:33,233 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:33,233 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-core/src/main/resources
+2016-10-28 00:11:33,235 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:33,236 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-core/src/test/resources
+2016-10-28 00:11:34,132 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:34,133 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 00:11:34,134 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:34,134 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/src/test/resources
+2016-10-28 00:11:35,484 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 00:11:39,917 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:39,918 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 00:11:39,920 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:39,920 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-business/src/test/resources
+2016-10-28 00:11:40,050 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 00:11:41,242 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:41,243 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 00:11:41,246 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:41,246 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 00:11:43,957 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce.medifirst2000:ecomerce-web-doc:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/pom.xml.
+2016-10-28 00:11:43,998 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:43,998 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/main/resources
+2016-10-28 00:11:44,000 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:11:44,000 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/test/resources
+2016-10-28 00:38:44,337 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 00:38:45,394 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:38:45,397 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 00:38:45,399 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:38:45,399 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 00:43:41,762 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:43:41,763 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-28 00:43:41,765 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:43:41,765 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 00:58:01,502 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:58:01,502 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/main/resources
+2016-10-28 00:58:01,504 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 00:58:01,504 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/test/resources
+2016-10-28 01:13:46,260 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 01:13:46,261 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 01:13:46,262 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 01:13:46,262 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 09:44:34,556 [Worker-0] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't read workspace state
+java.io.InvalidClassException: org.eclipse.m2e.core.internal.project.registry.BasicProjectRegistry; local class incompatible: stream classdesc serialVersionUID = 6232274446642339434, local class serialVersionUID = 5542512601401896748
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:617) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1622) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1517) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1622) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1517) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1771) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1350) ~[na:1.7.0_80]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:370) ~[na:1.7.0_80]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.readWorkspaceState(ProjectRegistryReader.java:100) ~[org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.<init>(ProjectRegistryManager.java:160) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.m2e.core.internal.MavenPluginActivator.start(MavenPluginActivator.java:210) [org.eclipse.m2e.core_1.5.1.20150109-1820.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) [na:1.7.0_80]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.7.0_80]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2595) [na:1.7.0_80]
+	at java.lang.Class.getConstructor0(Class.java:2895) [na:1.7.0_80]
+	at java.lang.Class.newInstance(Class.java:354) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:395) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) [na:1.7.0_80]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568) [org.eclipse.osgi_3.10.2.v20150203-1939.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar:na]
+	at org.eclipse.jdt.core.JavaCore.getClasspathVariableInitializer(JavaCore.java:3498) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.core.JavaCore.getClasspathVariable(JavaCore.java:3361) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaModelManager.getResolvedVariablePath(JavaModelManager.java:2588) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaModelManager.resolveVariableEntry(JavaModelManager.java:2508) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2664) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1962) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.core.JavaProject.isOnClasspath(JavaProject.java:2240) [org.eclipse.jdt.core_3.10.2.v20150120-1634.jar:na]
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.getOverlay(BuildpathIndicatorLabelDecorator.java:48) [org.eclipse.jdt.ui_3.10.2.v20141014-1419.jar:na]
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.decorate(BuildpathIndicatorLabelDecorator.java:35) [org.eclipse.jdt.ui_3.10.2.v20141014-1419.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:273) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332) [org.eclipse.ui.workbench_3.106.2.v20150204-1030.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.1.v20141014-1248.jar:na]
+2016-10-28 09:44:36,954 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.ecomerce:MainEcomerce:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/MainEcomerce/pom.xml.
+2016-10-28 09:44:39,435 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 09:44:42,181 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 09:44:42,261 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-core:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-core/pom.xml.
+2016-10-28 09:44:42,301 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-domain:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/pom.xml.
+2016-10-28 09:44:42,511 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 09:44:45,410 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.ecomerce:MainEcomerce:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/MainEcomerce/pom.xml.
+2016-10-28 09:44:45,976 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 09:44:48,882 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.ecomerce:MainEcomerce:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/MainEcomerce/pom.xml.
+2016-10-28 09:44:49,194 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-business:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-business/pom.xml.
+2016-10-28 09:44:49,261 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:44:49,265 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-10-28 09:44:49,368 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:44:49,368 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 09:44:49,445 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-config:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-config/pom.xml.
+2016-10-28 09:44:49,491 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-core:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-core/pom.xml.
+2016-10-28 09:44:49,563 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-domain:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/pom.xml.
+2016-10-28 09:44:49,622 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 09:44:49,992 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce.medifirst2000:ecomerce-web-doc:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/pom.xml.
+2016-10-28 09:45:06,898 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:06,901 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:45:06,903 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:06,903 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 09:45:07,102 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:07,103 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-core/src/main/resources
+2016-10-28 09:45:07,104 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:07,104 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-core/src/test/resources
+2016-10-28 09:45:07,360 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:07,360 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:45:07,362 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:07,362 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-domain/src/test/resources
+2016-10-28 09:45:10,357 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:10,358 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:45:10,360 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:10,360 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-business/src/test/resources
+2016-10-28 09:45:12,352 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:12,353 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 09:45:12,355 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:12,355 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 09:45:16,083 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:16,083 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/main/resources
+2016-10-28 09:45:16,084 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:45:16,085 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/test/resources
+2016-10-28 09:48:27,366 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-business:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-business/pom.xml.
+2016-10-28 09:48:29,494 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/poi/poi/3.15/poi-3.15.pom
+2016-10-28 09:48:29,936 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/poi/poi/3.15/poi-3.15.pom
+2016-10-28 09:48:30,507 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom
+2016-10-28 09:48:30,897 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom
+2016-10-28 09:48:31,105 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom
+2016-10-28 09:48:32,559 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom
+2016-10-28 09:48:32,760 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom
+2016-10-28 09:48:33,336 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom
+2016-10-28 09:48:33,534 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.pom
+2016-10-28 09:48:34,194 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.pom
+2016-10-28 09:48:34,391 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/38/commons-parent-38.pom
+2016-10-28 09:48:35,557 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/38/commons-parent-38.pom
+2016-10-28 09:48:35,755 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+2016-10-28 09:48:36,291 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+2016-10-28 09:48:36,537 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/poi/poi/3.15/poi-3.15.jar
+2016-10-28 09:48:39,878 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-business:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-business/pom.xml.
+2016-10-28 09:48:46,629 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/poi/poi/3.15/poi-3.15.jar
+2016-10-28 09:48:46,849 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar
+2016-10-28 09:48:52,909 [Worker-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar
+2016-10-28 09:48:53,522 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-config:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-config/pom.xml.
+2016-10-28 09:48:53,542 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-core:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-core/pom.xml.
+2016-10-28 09:48:53,566 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-domain:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-domain/pom.xml.
+2016-10-28 09:48:53,593 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-web:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/pom.xml.
+2016-10-28 09:48:53,770 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.jasamedika:Medifirst2000:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/Medifirst2000/pom.xml.
+2016-10-28 09:48:53,789 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.ecomerce:ecomerce-web:0.0.1-SNAPSHOT @ /home/adikdarmadi/workspace/ecomerce/ecomerce-web/pom.xml.
+2016-10-28 09:48:56,743 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-config/src/main/java
+2016-10-28 09:48:56,743 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-config/src/main/resources
+2016-10-28 09:48:56,892 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-config/src/test/java
+2016-10-28 09:48:57,181 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-core/src/main/java
+2016-10-28 09:48:57,181 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-core/src/main/resources
+2016-10-28 09:48:57,182 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-core/src/test/java
+2016-10-28 09:48:57,182 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-core/src/test/resources
+2016-10-28 09:48:57,595 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-domain/src/main/java
+2016-10-28 09:48:57,595 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-domain/src/main/resources
+2016-10-28 09:48:57,596 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-domain/src/test/java
+2016-10-28 09:48:57,596 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-domain/src/test/resources
+2016-10-28 09:48:57,600 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-business:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-business/pom.xml.
+2016-10-28 09:48:57,872 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-business/src/main/java
+2016-10-28 09:48:57,873 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-business/target/generated-sources/java
+2016-10-28 09:48:57,873 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-business/src/main/resources
+2016-10-28 09:48:57,874 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-business/src/test/java
+2016-10-28 09:48:57,875 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-business/src/test/resources
+2016-10-28 09:48:57,969 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-config:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-config/pom.xml.
+2016-10-28 09:48:58,004 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-core:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-core/pom.xml.
+2016-10-28 09:48:58,052 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-domain:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-domain/pom.xml.
+2016-10-28 09:48:58,118 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-web/src/main/java
+2016-10-28 09:48:58,118 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /jasamedika-web/src/main/resources
+2016-10-28 09:48:58,119 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /jasamedika-web/src/test/java
+2016-10-28 09:48:58,148 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-web:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/pom.xml.
+2016-10-28 09:48:59,793 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.jasamedika:Medifirst2000:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/Medifirst2000/pom.xml.
+2016-10-28 09:48:59,814 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-domain:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-domain/pom.xml.
+2016-10-28 09:48:59,850 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-business:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-business/pom.xml.
+2016-10-28 09:48:59,902 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-core:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-core/pom.xml.
+2016-10-28 09:48:59,939 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-web:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/pom.xml.
+2016-10-28 09:49:00,001 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-config:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-config/pom.xml.
+2016-10-28 09:49:14,943 [Worker-5] INFO  o.e.m.c.i.p.r.ProjectRegistryRefreshJob - org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob was canceled
+2016-10-28 09:49:39,411 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 6 project(s) in 78 sec
+2016-10-28 09:49:43,511 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:49:43,511 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:49:43,514 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:49:43,515 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 09:49:46,887 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-config:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-config/pom.xml.
+2016-10-28 09:49:47,020 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:49:47,022 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-10-28 09:49:47,069 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:49:47,070 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-config/src/test/resources
+2016-10-28 09:50:37,416 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-core:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-core/pom.xml.
+2016-10-28 09:50:38,399 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:50:38,399 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:50:38,401 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:50:38,402 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:50:45,809 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-domain:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-domain/pom.xml.
+2016-10-28 09:50:45,999 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:50:46,000 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:50:46,004 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:50:46,009 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:51:06,552 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-business:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-business/pom.xml.
+2016-10-28 09:51:15,014 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:51:15,015 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:51:15,019 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:51:15,020 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:51:18,128 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.jasamedika:jasamedika-web:0.0.1-SNAPSHOT @ /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/pom.xml.
+2016-10-28 09:51:20,295 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:51:20,297 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 09:51:20,400 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:51:20,402 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 09:53:45,913 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:45,913 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:53:45,915 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:45,915 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:53:53,632 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:53,633 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:53:53,635 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:53,635 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:53:54,541 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:54,542 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:53:54,544 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:53:54,544 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 09:54:48,411 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:54:48,412 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:54:48,414 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:54:48,414 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:54:48,541 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:54:48,543 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 09:54:48,558 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:54:48,559 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 09:58:51,451 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:58:51,453 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:58:51,455 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:58:51,456 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 09:58:58,520 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:58:58,521 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 09:58:58,523 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 09:58:58,523 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 10:01:06,411 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:06,412 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 10:01:06,414 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:06,414 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 10:01:09,759 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:09,761 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 10:01:09,762 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:09,763 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 10:01:10,061 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:10,063 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 10:01:10,065 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:01:10,066 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 10:02:18,259 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:18,260 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-10-28 10:02:18,262 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:18,262 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 10:02:18,497 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:18,498 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 10:02:18,501 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:18,501 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 10:02:28,080 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:28,082 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 10:02:28,086 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:28,086 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 10:02:36,540 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:36,541 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-28 10:02:36,544 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 10:02:36,544 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/adikdarmadi/01D22A110F163550/sarprasCloud/jasamedika-web/src/test/resources
+2016-10-28 20:40:43,815 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:40:43,851 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-10-28 20:40:43,869 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:40:43,870 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web/src/test/resources
+2016-10-28 20:40:44,421 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:40:44,436 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/main/resources
+2016-10-28 20:40:44,439 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:40:44,439 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-web-doc/src/test/resources
+2016-10-28 20:42:12,317 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:42:12,318 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2016-10-28 20:42:12,338 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:42:12,338 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 20:43:56,461 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:43:56,465 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-10-28 20:43:56,467 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:43:56,468 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 20:45:46,556 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:45:46,556 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-28 20:45:46,559 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:45:46,559 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 20:46:19,551 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:46:19,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-28 20:46:19,555 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:46:19,555 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources
+2016-10-28 20:53:01,488 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:53:01,488 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-10-28 20:53:01,489 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-28 20:53:01,490 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adikdarmadi/workspace/ecomerce/ecomerce-config/src/test/resources

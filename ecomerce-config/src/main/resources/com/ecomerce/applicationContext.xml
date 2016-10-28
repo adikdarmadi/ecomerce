@@ -11,6 +11,7 @@
 
 	<context:property-placeholder
 		location="	
+		classpath*:jdbc.heroku.properties,
 		classpath*:jdbc.testing.properties,
 		classpath*:jdbc.logging.properties,
 	classpath*:jdbc.${spring.profiles.default}.properties

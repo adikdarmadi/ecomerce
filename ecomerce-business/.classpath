@@ -6,11 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -31,11 +26,6 @@
 	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/el/el-api/2.2/el-api-2.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" sourcepath="M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JDK">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
@@ -118,6 +108,11 @@
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

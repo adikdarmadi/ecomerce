@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+            classpath:net/bull/javamelody/monitoring-spring.xml
+            classpath*:com/ecomerce/**/applicationContext.xml
+            
+        </param-value>
+  </context-param>
+  <context-param>
+    <param-name>spring.profiles.default</param-name>
+    <param-value>development</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>net.bull.javamelody.SessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>
+            org.springframework.security.web.session.HttpSessionEventPublisher
+        </listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>httpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>monitoring</filter-name>
+    <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>monitoring</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>
+                /WEB-INF/springmvc-context.xml
+            </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <filter-mapping>
+    <filter-name>httpMethodFilter</filter-name>
+    <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+  </filter-mapping>
+  <servlet-mapping>
+    <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+    <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>405</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/error.jsp</location>
+  </error-page>
+</web-app>
