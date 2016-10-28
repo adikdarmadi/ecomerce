@@ -1,8 +1,0 @@
-#Tomcat publish data
-#Fri Oct 28 01:13:47 WIB 2016
-org.eclipse.jst.jee.server\:/binary\:/home/adikdarmadi/.m2/repository/org/springframework/spring-web/4.1.4.RELEASE/spring-web-4.1.4.RELEASE.jar=WEB-INF/lib/spring-web-4.1.4.RELEASE.jar
-org.eclipse.jst.j2ee.server\:ecomerce-business=WEB-INF/lib/ecomerce-business-0.0.1-SNAPSHOT.jar
-org.eclipse.jst.jee.server\:/binary\:/home/adikdarmadi/.m2/repository/net/bull/javamelody/javamelody-core/1.42.0/javamelody-core-1.42.0.jar=WEB-INF/lib/javamelody-core-1.42.0.jar
-org.eclipse.jst.j2ee.server\:ecomerce-config=WEB-INF/lib/ecomerce-config-0.0.1-SNAPSHOT.jar
-org.eclipse.jst.j2ee.server\:ecomerce-core=WEB-INF/lib/ecomerce-core-0.0.1-SNAPSHOT.jar
-org.eclipse.jst.j2ee.server\:ecomerce-domain=WEB-INF/lib/ecomerce-domain-0.0.1-SNAPSHOT.jar
