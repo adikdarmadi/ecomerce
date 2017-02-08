@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Build-Jdk: 1.7.0_51
-Built-By: jasamedika lenovo 2
+Build-Jdk: 1.7.0_79
+Built-By: jasamedika-pc
 Created-By: Maven Integration for Eclipse
 

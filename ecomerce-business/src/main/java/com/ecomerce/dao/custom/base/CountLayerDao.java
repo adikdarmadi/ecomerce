@@ -3,14 +3,14 @@ package com.ecomerce.dao.custom.base;
 import java.util.List;
 import java.util.Map;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.util.PropCriteriaAndValue;
 
 /**
  * @author Roberto
  * 
  */
-public interface CountLayerDao<T extends BaseModel> extends KernelDao<T> {
+public interface CountLayerDao<T extends BaseMaster> extends KernelDao<T> {
 
 	/**
 	 * Counts all elements of the table.

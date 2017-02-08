@@ -2,6 +2,7 @@ package com.ecomerce.controller;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 
@@ -9,7 +10,8 @@ public class ApiError {
 
     private HttpStatus status;
     private String message;
-    private List<String> errors;
+    private List<Map<String,Object>> errors;
+	private String statusCode;
 
     //
 
@@ -17,48 +19,48 @@ public class ApiError {
         super();
     }
 
-    public ApiError(final HttpStatus status, final String message, final List<String> errors) {
+    public ApiError(final HttpStatus status, final String message, final List<Map<String,Object>> errors,String statusCode) {
         super();
         this.status = status;
         this.message = message;
         this.errors = errors;
+        this.statusCode=statusCode;
     }
 
-    public ApiError(final HttpStatus status, final String message, final String error) {
-        super();
-        this.status = status;
-        this.message = message;
-        errors = Arrays.asList(error);
-    }
+	public HttpStatus getStatus() {
+		return status;
+	}
 
-    //
+	public void setStatus(HttpStatus status) {
+		this.status = status;
+	}
 
-    public HttpStatus getStatus() {
-        return status;
-    }
+	public String getMessage() {
+		return message;
+	}
 
-    public void setStatus(final HttpStatus status) {
-        this.status = status;
-    }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-    public String getMessage() {
-        return message;
-    }
 
-    public void setMessage(final String message) {
-        this.message = message;
-    }
+	public String getStatusCode() {
+		return statusCode;
+	}
 
-    public List<String> getErrors() {
-        return errors;
-    }
+	public void setStatusCode(String statusCode) {
+		this.statusCode = statusCode;
+	}
 
-    public void setErrors(final List<String> errors) {
-        this.errors = errors;
-    }
+	public List<Map<String, Object>> getErrors() {
+		return errors;
+	}
 
-    public void setError(final String error) {
-        errors = Arrays.asList(error);
-    }
+	public void setErrors(List<Map<String, Object>> errors) {
+		this.errors = errors;
+	}
+
+   
+
 
 }

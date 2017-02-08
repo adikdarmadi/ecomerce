@@ -13,7 +13,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.orm.hibernate3.HibernateSystemException;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.CoreDao;
 import com.ecomerce.dao.custom.base.util.CoreExceptionText;
 import com.ecomerce.dao.custom.base.util.CorePersistenceException;
@@ -34,7 +35,7 @@ import com.ecomerce.dao.custom.base.util.SqlUtil;
  *            the generic type
  * @author Roberto
  */
-public abstract class CoreDaoImpl<T extends BaseModel> extends
+public abstract class CoreDaoImpl<T extends BaseMaster> extends
 		FindLayerDaoImpl<T> implements CoreDao<T> {
 
 	/**
@@ -46,7 +47,7 @@ public abstract class CoreDaoImpl<T extends BaseModel> extends
 	 *            constructor also to be able to access class methods
 	 * 
 	 * */
-	public CoreDaoImpl(Class<? extends BaseModel> clazz) {
+	public CoreDaoImpl(Class<? extends BaseMaster> clazz) {
 		super(clazz);
 	}
 
@@ -117,7 +118,7 @@ public abstract class CoreDaoImpl<T extends BaseModel> extends
 	 * 
 	 * @param coreDomain
 	 */
-	public final void evict(BaseModel coreDomain) {
+	public final void evict(BaseMaster coreDomain) {
 		em.detach(coreDomain);
 	}
 

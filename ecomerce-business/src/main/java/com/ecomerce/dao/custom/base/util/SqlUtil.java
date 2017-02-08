@@ -7,7 +7,7 @@ import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.IncompleteArgumentException;
 import org.apache.commons.lang.StringUtils;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 
 import javax.persistence.Query;
 
@@ -273,7 +273,7 @@ public final class SqlUtil {
 	 * @return The resulting list of the query
 	 */
 	@SuppressWarnings(UNCHECKED)
-	public static List<? extends BaseModel> doQuery(Query query,
+	public static List<? extends BaseMaster> doQuery(Query query,
 			int... rowStartIdxAndCount) {
 		if (rowStartIdxAndCount != null && rowStartIdxAndCount.length > 0) {
 			int rowStartIdx = Math.max(0, rowStartIdxAndCount[0]);

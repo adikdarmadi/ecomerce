@@ -3,7 +3,8 @@ package com.ecomerce.dao.custom.base;
 import java.util.List;
 import java.util.Map;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.util.PaginationResult;
 import com.ecomerce.dao.custom.base.util.PropCriteriaAndValue;
 import com.ecomerce.dao.custom.base.util.QueryOrder;
@@ -20,7 +21,7 @@ import com.ecomerce.dao.custom.base.util.QueryOrder;
  *            the generic type
  * @author Roberto
  */
-public interface CoreDao<T extends BaseModel> extends FindLayerDao<T> {
+public interface CoreDao<T extends BaseMaster> extends FindLayerDao<T> {
 
 	/**
 	 * Inserts a new instance element.
@@ -277,6 +278,6 @@ public interface CoreDao<T extends BaseModel> extends FindLayerDao<T> {
 	 * 
 	 * @param coreDomain
 	 */
-	void evict(BaseModel coreDomain);
+	void evict(BaseMaster coreDomain);
 
 }

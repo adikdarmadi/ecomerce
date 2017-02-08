@@ -3,6 +3,7 @@ package com.ecomerce.controller;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
@@ -28,6 +29,11 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import scala.collection.immutable.HashMap;
+
 @ControllerAdvice
 public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -35,15 +41,25 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(final MethodArgumentNotValidException ex, final HttpHeaders headers, final HttpStatus status, final WebRequest request) {
         logger.info(ex.getClass().getName());
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
         //
         final List<String> errors = new ArrayList<String>();
         for (final FieldError error : ex.getBindingResult().getFieldErrors()) {
-            errors.add(error.getField() + ": " + error.getDefaultMessage());
+            Map<String,Object> rm=new java.util.HashMap<String,Object>();
+            rm.put("error",error.getDefaultMessage());
+            data.add(rm);
         }
         for (final ObjectError error : ex.getBindingResult().getGlobalErrors()) {
-            errors.add(error.getObjectName() + ": " + error.getDefaultMessage());
+        	Map<String,Object> rm=new java.util.HashMap<String,Object>();
+            rm.put("error",error.getDefaultMessage());
+            data.add(rm);
         }
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), errors);
+        
+   
+
+
+		
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
@@ -51,14 +67,20 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleBindException(final BindException ex, final HttpHeaders headers, final HttpStatus status, final WebRequest request) {
         logger.info(ex.getClass().getName());
         //
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        //
         final List<String> errors = new ArrayList<String>();
         for (final FieldError error : ex.getBindingResult().getFieldErrors()) {
-            errors.add(error.getField() + ": " + error.getDefaultMessage());
+            Map<String,Object> rm=new java.util.HashMap<String,Object>();
+            rm.put("error",error.getDefaultMessage());
+            data.add(rm);
         }
         for (final ObjectError error : ex.getBindingResult().getGlobalErrors()) {
-            errors.add(error.getObjectName() + ": " + error.getDefaultMessage());
+        	Map<String,Object> rm=new java.util.HashMap<String,Object>();
+            rm.put("error",error.getDefaultMessage());
+            data.add(rm);
         }
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), errors);
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
@@ -67,8 +89,12 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         logger.info(ex.getClass().getName());
         //
         final String error = ex.getValue() + " value for " + ex.getPropertyName() + " should be of type " + ex.getRequiredType();
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",error);
+        data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), error);
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -77,7 +103,12 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         logger.info(ex.getClass().getName());
         //
         final String error = ex.getRequestPartName() + " part is missing";
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), error);
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",error);
+        data.add(rm);
+
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -86,7 +117,12 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         logger.info(ex.getClass().getName());
         //
         final String error = ex.getParameterName() + " parameter is missing";
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), error);
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",error);
+        data.add(rm);
+
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -97,11 +133,16 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         logger.info(ex.getClass().getName());
         //
         final List<String> errors = new ArrayList<String>();
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+
+
         for (final ConstraintViolation<?> violation : ex.getConstraintViolations()) {
-            errors.add(violation.getRootBeanClass().getName() + " " + violation.getPropertyPath() + ": " + violation.getMessage());
+            Map<String,Object> rm=new java.util.HashMap<String,Object>();
+            rm.put("error", violation.getMessage());
+            data.add(rm);
         }
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), errors);
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -113,7 +154,11 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         //
         final String error = "No handler found for " + ex.getHttpMethod() + " " + ex.getRequestURL();
 
-        final ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, ex.getLocalizedMessage(), error);
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",error);
+        data.add(rm);
+        final ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, ex.getLocalizedMessage(), data,"404");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -127,8 +172,12 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         builder.append(ex.getMethod());
         builder.append(" method is not supported for this request. Supported methods are ");
         //ex.getSupportedHttpMethods().forEach(t -> builder.append(t + " "));
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",builder);
+        data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.METHOD_NOT_ALLOWED, ex.getLocalizedMessage(), builder.toString());
+        final ApiError apiError = new ApiError(HttpStatus.METHOD_NOT_ALLOWED, ex.getLocalizedMessage(), data,"405");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -142,20 +191,28 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         builder.append(ex.getContentType());
         builder.append(" media type is not supported. Supported media types are ");
         //ex.getSupportedMediaTypes().forEach(t -> builder.append(t + " "));
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",builder);
+        data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.UNSUPPORTED_MEDIA_TYPE, ex.getLocalizedMessage(), builder.substring(0, builder.length() - 2));
+        final ApiError apiError = new ApiError(HttpStatus.UNSUPPORTED_MEDIA_TYPE, ex.getLocalizedMessage(), data,"415");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
     
 
-    // 500
+    // "500"
 
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
     	final StringBuilder builder = new StringBuilder();
         builder.append(ex.toString());
         //
-        final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex.getLocalizedMessage(), builder.toString());
+        List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
+        Map<String,Object> rm=new java.util.HashMap<String,Object>();
+        rm.put("error",builder);
+        data.add(rm);
+        final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex.toString(), data,"500");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 

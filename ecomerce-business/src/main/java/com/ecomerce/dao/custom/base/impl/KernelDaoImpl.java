@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.KernelDao;
 import com.ecomerce.dao.custom.base.util.CoreExceptionText;
 import com.ecomerce.dao.custom.base.util.CorePersistenceException;
@@ -27,7 +27,7 @@ import com.ecomerce.dao.custom.base.util.SqlUtil;
  * @author Roberto
  * 
  */
-public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
+public class KernelDaoImpl<T extends BaseMaster> implements KernelDao<T> {
 
 	@PersistenceContext
 	protected EntityManager em;
@@ -38,7 +38,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 			.getLogger(KernelDaoImpl.class);
 
 	/** The clazz. */
-	protected final Class<? extends BaseModel> clazz;
+	protected final Class<? extends BaseMaster> clazz;
 
 	/**
 	 * This variable contains the String representation of the clazz class used
@@ -82,7 +82,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 	 */
 	private String classNameForGenericDao = null;
 
-	public KernelDaoImpl(Class<? extends BaseModel> clazz) {
+	public KernelDaoImpl(Class<? extends BaseMaster> clazz) {
 		super();
 		this.clazz = clazz;
 		clazzSimpleName = clazz.getSimpleName();
@@ -116,7 +116,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 	 */
 	protected String getSelectFindQuery() {
 		if (classNameForGenericDao != null
-				&& clazzSimpleName.equals(BaseModel.class.getSimpleName())) {
+				&& clazzSimpleName.equals(BaseMaster.class.getSimpleName())) {
 			return StringUtils.replace(selectFindQuery, clazzSimpleName,
 					classNameForGenericDao);
 		} else {
@@ -130,7 +130,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 	 */
 	public String getSelectCountQuery() {
 		if (classNameForGenericDao != null
-				&& clazzSimpleName.equals(BaseModel.class.getSimpleName())) {
+				&& clazzSimpleName.equals(BaseMaster.class.getSimpleName())) {
 			return StringUtils.replace(selectCountQuery, clazzSimpleName,
 					classNameForGenericDao);
 		} else {
@@ -144,7 +144,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 	 */
 	public String getDeleteFromQuery() {
 		if (classNameForGenericDao != null
-				&& clazzSimpleName.equals(BaseModel.class.getSimpleName())) {
+				&& clazzSimpleName.equals(BaseMaster.class.getSimpleName())) {
 			return StringUtils.replace(deleteFromQuery, clazzSimpleName,
 					classNameForGenericDao);
 		} else {
@@ -158,7 +158,7 @@ public class KernelDaoImpl<T extends BaseModel> implements KernelDao<T> {
 	 */
 	public String getUpdateFromQuery() {
 		if (classNameForGenericDao != null
-				&& clazzSimpleName.equals(BaseModel.class.getSimpleName())) {
+				&& clazzSimpleName.equals(BaseMaster.class.getSimpleName())) {
 			return StringUtils.replace(updateFromQuery, clazzSimpleName,
 					classNameForGenericDao);
 		} else {

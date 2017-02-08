@@ -4,14 +4,15 @@ import java.util.List;
 
 import javax.persistence.Query;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
+import com.ecomerce.base.BaseMaster;
 
 /**
  * The Interface KernelDao
  * 
  * @author Roberto
  */
-public interface KernelDao<T extends BaseModel> {
+public interface KernelDao<T extends BaseMaster> {
 
 	/** The Constant UNCHECKED. */
 	String UNCHECKED = "unchecked";

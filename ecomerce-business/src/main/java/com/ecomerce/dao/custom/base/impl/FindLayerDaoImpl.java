@@ -7,7 +7,7 @@ import javax.persistence.Query;
 
 import org.hibernate.NonUniqueResultException;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.FindLayerDao;
 import com.ecomerce.dao.custom.base.util.CoreExceptionText;
 import com.ecomerce.dao.custom.base.util.CorePersistenceException;
@@ -20,7 +20,7 @@ import com.ecomerce.dao.custom.base.util.SqlUtil;
  * @author Roberto
  * 
  */
-public class FindLayerDaoImpl<T extends BaseModel> extends CountLayerDaoImpl<T>
+public class FindLayerDaoImpl<T extends BaseMaster> extends CountLayerDaoImpl<T>
 		implements FindLayerDao<T> {
 
 	/**
@@ -31,7 +31,7 @@ public class FindLayerDaoImpl<T extends BaseModel> extends CountLayerDaoImpl<T>
 	 *            CoreDaoImpl<T> sadly we need it to be passed in the
 	 *            constructor also to be able to access class methods
 	 */
-	public FindLayerDaoImpl(Class<? extends BaseModel> clazz) {
+	public FindLayerDaoImpl(Class<? extends BaseMaster> clazz) {
 		super(clazz);
 	}
 

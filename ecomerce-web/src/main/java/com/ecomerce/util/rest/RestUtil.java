@@ -74,9 +74,15 @@ public class RestUtil {
 				headers.add(key, mapHeaderMessage.get(key));
 			}
 		}
+		
+		
 
 		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("messages", mapHeaderMessage);
+		if (null != mapHeaderMessage) {
+			for (String key : mapHeaderMessage.keySet()) {
+				map.put(key,mapHeaderMessage.get(key));
+			}
+		}
 		map.put("data", src);
 		//headers.add(ACCESS_CONTROL_ALLOW_ORIGIN, "*");
 		headers.set(CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

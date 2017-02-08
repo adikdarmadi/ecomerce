@@ -11,7 +11,7 @@ public class WebConstants {
 		public static final String TOTAL_PAGE_HEADER = "Total-Pages";
 		public static final String TOTAL_COUNT_HEADER = "Total-Count";
 		public static final String ERROR_MESSAGE = "Error-Message";
-		public static final String LABEL_SUCCESS = "label-success";
+		public static final String LABEL_SUCCESS = "SUCCESS";
 		public static final String LABEL_ERROR = "label-error";
 		public static final String LABEL_SUCCESS_CREATED = "label-success-created";
 		public static final String LABEL_SUCCESS_OK = "label-success-ok";
@@ -19,4 +19,10 @@ public class WebConstants {
 
 	// HEADER KEY TOKEN
 	public static final String AUTH_HEADER_NAME = "X-AUTH-TOKEN";
+	
+	public static final String MESSAGE = "message";
+	
+	public static final String STATUS_CODE = "statusCode";
+
+	public static final String STATUS = "status";
 }

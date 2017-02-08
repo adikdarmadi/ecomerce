@@ -3,7 +3,7 @@ package com.ecomerce.dao.custom.base.impl;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.util.CoreExceptionText;
 import com.ecomerce.dao.custom.base.util.CorePersistenceException;
 
@@ -25,7 +25,7 @@ public class FindConverterDao {
 	 *            the id
 	 * @return the t
 	 */
-	public Object findObjectById(Class<? extends BaseModel> clazz, Integer id) {
+	public Object findObjectById(Class<? extends BaseMaster> clazz, Integer id) {
 		try {
 			return em.find(clazz, id);
 		} catch (Exception re) {

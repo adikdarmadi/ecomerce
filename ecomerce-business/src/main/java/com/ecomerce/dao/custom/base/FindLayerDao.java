@@ -5,7 +5,8 @@ import java.util.Map;
 
 import org.hibernate.NonUniqueResultException;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.util.PropCriteriaAndValue;
 import com.ecomerce.dao.custom.base.util.QueryOrder;
 
@@ -13,7 +14,7 @@ import com.ecomerce.dao.custom.base.util.QueryOrder;
  * @author Roberto
  * 
  */
-public interface FindLayerDao<T extends BaseModel> extends CountLayerDao<T> {
+public interface FindLayerDao<T extends BaseMaster> extends CountLayerDao<T> {
 
 	/**
 	 * Finds an instance by its Id.

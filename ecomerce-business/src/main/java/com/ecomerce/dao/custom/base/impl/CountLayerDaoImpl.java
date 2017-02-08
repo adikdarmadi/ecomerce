@@ -5,7 +5,7 @@ import java.util.Map;
 
 import javax.persistence.Query;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 import com.ecomerce.dao.custom.base.CountLayerDao;
 import com.ecomerce.dao.custom.base.util.CoreExceptionText;
 import com.ecomerce.dao.custom.base.util.CorePersistenceException;
@@ -17,7 +17,7 @@ import com.ecomerce.dao.custom.base.util.SqlUtil;
  * @author Roberto
  * 
  */
-public class CountLayerDaoImpl<T extends BaseModel> extends KernelDaoImpl<T>
+public class CountLayerDaoImpl<T extends BaseMaster> extends KernelDaoImpl<T>
 		implements CountLayerDao<T> {
 
 	/**
@@ -28,7 +28,7 @@ public class CountLayerDaoImpl<T extends BaseModel> extends KernelDaoImpl<T>
 	 *            CoreDaoImpl<T> sadly we need it to be passed in the
 	 *            constructor also to be able to access class methods
 	 */
-	public CountLayerDaoImpl(Class<? extends BaseModel> clazz) {
+	public CountLayerDaoImpl(Class<? extends BaseMaster> clazz) {
 		super(clazz);
 	}
 

@@ -3,7 +3,7 @@ package com.ecomerce.dao.custom.base.util;
 import java.io.Serializable;
 import java.util.List;
 
-import com.ecomerce.base.BaseModel;
+import com.ecomerce.base.BaseMaster;
 
 /**
  * @author Roberto
@@ -11,9 +11,9 @@ import com.ecomerce.base.BaseModel;
  * and some properties that can be use for pagination.
  * 
  * @param <T>
- *            the generic type extends BaseModel
+ *            the generic type extends BaseMaster
  */
-public final class PaginationResult<T extends BaseModel> implements
+public final class PaginationResult<T extends BaseMaster> implements
 		Serializable {
 
 	/**
