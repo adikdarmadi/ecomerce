@@ -12,7 +12,7 @@ import com.ecomerce.entities.Produk;
 @Repository("ProdukDao")
 public interface ProdukDao extends PagingAndSortingRepository<Produk, Integer> {
 
-	@Query("select new map (p as produk,detailJenisProduk as detailJenisProduk,jenisProduk as jenisProduk) from Produk p left join  p.detailJenisProduk detailJenisProduk left join  detailJenisProduk.jenisProduk jenisProduk ")
+	@Query("select new map (p.id as id,p.namaProduk as namaProduk) from Produk p  ")
 	List<Map<String,Object>> findAllProduk();
 
 

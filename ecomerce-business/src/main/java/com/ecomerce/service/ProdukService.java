@@ -3,6 +3,7 @@ package com.ecomerce.service;
 import java.util.Map;
 
 import com.ecomerce.entities.Produk;
+import com.ecomerce.vo.ProdukVO;
 
 /**
  * Agama Service
@@ -11,8 +12,8 @@ import com.ecomerce.entities.Produk;
  */
 public interface ProdukService {
 
-	Map<String, Object> saveProduk(Produk vo);
-
 	Map<String, Object> findByIdProduk();
+
+	Map<String, Object> saveProduk(ProdukVO p);
 
 }

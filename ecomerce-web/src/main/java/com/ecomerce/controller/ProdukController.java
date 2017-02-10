@@ -25,6 +25,7 @@ import com.ecomerce.entities.Produk;
 import com.ecomerce.exception.ServiceVOException;
 import com.ecomerce.service.ProdukService;
 import com.ecomerce.util.rest.RestUtil;
+import com.ecomerce.vo.ProdukVO;
 
 @SuppressWarnings("rawtypes")
 @RestController
@@ -39,7 +40,7 @@ public class ProdukController extends LocaleController{
 
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/save-produk/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Map<String,Object>> saveProduk(@Valid @RequestBody Produk entity,HttpServletRequest request) {
+	public ResponseEntity<Map<String,Object>> saveProduk(@Valid @RequestBody ProdukVO entity,HttpServletRequest request) {
 			Map<String,Object> result=produkService.saveProduk(entity);
 			/*mapHeaderMessage.put(WebConstants.STATUS,HttpStatus.CREATED.name());
 			mapHeaderMessage.put(WebConstants.STATUS_CODE,HttpStatus.CREATED.toString());
