@@ -17,16 +17,15 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="controller"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="/ecomerce-config"/>
-	<classpathentry kind="src" path="/ecomerce-core"/>
-	<classpathentry kind="src" path="/ecomerce-domain"/>
-	<classpathentry kind="src" path="/ecomerce-business"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-business"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-domain"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

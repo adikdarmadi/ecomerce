@@ -78,7 +78,7 @@ public class StrukOrderServiceImpl implements StrukOrderService {
 				hasil.add(result);
 			}
 		} catch (Exception e) {
-			System.out.println("masuk");
+		
 		}
 		
 		result.put("strukOrderList",hasil.get(0));

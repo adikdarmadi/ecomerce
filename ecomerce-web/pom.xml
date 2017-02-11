@@ -56,6 +56,14 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Javax Servlet Lib -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- Spring MVC -->
 		<dependency>
@@ -87,13 +95,7 @@
 		</dependency>
 
 
-		<!-- Javax Servlet Lib -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servlet.version}</version>
-			<scope>provided</scope>
-		</dependency>
+		
 
 		<!-- Common lib -->
 		<dependency>
@@ -165,11 +167,7 @@
 			<version>0.10</version>
 		</dependency>
 
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>0.4</version>
-		</dependency>
+		
 
 		<!-- swagger -->
 		<dependency>
