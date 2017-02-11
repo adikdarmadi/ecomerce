@@ -59,7 +59,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 
 
 		
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
@@ -80,7 +80,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
             rm.put("error",error.getDefaultMessage());
             data.add(rm);
         }
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
@@ -94,7 +94,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         rm.put("error",error);
         data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -108,7 +108,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         rm.put("error",error);
         data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -122,7 +122,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         rm.put("error",error);
         data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -142,7 +142,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
             data.add(rm);
         }
 
-        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, null, data,"400");
+        final ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, "ERROR", data,"400");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -158,7 +158,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         Map<String,Object> rm=new java.util.HashMap<String,Object>();
         rm.put("error",error);
         data.add(rm);
-        final ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, null, data,"404");
+        final ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, "ERROR", data,"404");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -177,7 +177,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         rm.put("error",builder);
         data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.METHOD_NOT_ALLOWED, null, data,"405");
+        final ApiError apiError = new ApiError(HttpStatus.METHOD_NOT_ALLOWED, "ERROR", data,"405");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 
@@ -196,7 +196,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         rm.put("error",builder);
         data.add(rm);
 
-        final ApiError apiError = new ApiError(HttpStatus.UNSUPPORTED_MEDIA_TYPE, null, data,"415");
+        final ApiError apiError = new ApiError(HttpStatus.UNSUPPORTED_MEDIA_TYPE, "ERROR", data,"415");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
     
@@ -212,7 +212,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         Map<String,Object> rm=new java.util.HashMap<String,Object>();
         rm.put("error",builder);
         data.add(rm);
-        final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex.toString(), data,"500");
+        final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, "ERROR", data,"500");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
     }
 

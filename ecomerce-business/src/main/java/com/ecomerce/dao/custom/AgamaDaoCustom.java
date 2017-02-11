@@ -7,5 +7,7 @@ import com.ecomerce.entities.Agama;
  * 
  * @author Roberto
  */
-public interface AgamaDaoCustom extends CoreDao<Agama> {
+public interface AgamaDaoCustom  {
+
+	int countAgama();
 }

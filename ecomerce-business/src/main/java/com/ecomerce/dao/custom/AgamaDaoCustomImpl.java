@@ -1,9 +1,10 @@
 package com.ecomerce.dao.custom;
 
-import org.springframework.stereotype.Repository;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
-import com.ecomerce.dao.custom.base.impl.CoreDaoImpl;
-import com.ecomerce.entities.Agama;
+import org.springframework.stereotype.Repository;
 
 /**
  * Repository Custom class
@@ -11,11 +12,24 @@ import com.ecomerce.entities.Agama;
  * @author Roberto
  */
 @Repository("AgamaDaoCustom")
-public class AgamaDaoCustomImpl extends CoreDaoImpl<Agama> implements
-		AgamaDaoCustom {
+public class AgamaDaoCustomImpl  implements AgamaDaoCustom {
 
-	public AgamaDaoCustomImpl() {
-		super(Agama.class);
+	@PersistenceContext
+	protected EntityManager em;
+	
+	
+	@Override
+	public int countAgama() {
+
+		StringBuffer buffer = new StringBuffer();
+
+		buffer.append("select count(model.id) from  Agama model where  model.id is not null ");
+
+		Query query = em.createQuery(buffer.toString());
+
+		return ((Long) query.getSingleResult()).intValue();
 	}
+
+	
 
 }

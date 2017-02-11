@@ -9,7 +9,7 @@
 		<relativePath>../MainEcomerce/pom.xml</relativePath>
 	</parent>
 	<build>
-		<finalName>ecomerce-web</finalName>
+		<finalName>ecomerce-business</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

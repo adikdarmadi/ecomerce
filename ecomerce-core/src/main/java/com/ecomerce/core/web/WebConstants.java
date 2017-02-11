@@ -12,7 +12,7 @@ public class WebConstants {
 		public static final String TOTAL_COUNT_HEADER = "Total-Count";
 		public static final String ERROR_MESSAGE = "Error-Message";
 		public static final String LABEL_SUCCESS = "SUCCESS";
-		public static final String LABEL_ERROR = "label-error";
+		public static final String LABEL_ERROR = "ERROR";
 		public static final String LABEL_SUCCESS_CREATED = "label-success-created";
 		public static final String LABEL_SUCCESS_OK = "label-success-ok";
 	}
