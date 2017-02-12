@@ -11,18 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ecomerce.constants.Constants;
-import com.ecomerce.constants.MessageResource;
 import com.ecomerce.controller.base.LocaleController;
 import com.ecomerce.core.web.WebConstants;
-import com.ecomerce.entities.Produk;
-import com.ecomerce.exception.ServiceVOException;
 import com.ecomerce.service.ProdukService;
 import com.ecomerce.util.rest.RestUtil;
 import com.ecomerce.vo.ProdukVO;

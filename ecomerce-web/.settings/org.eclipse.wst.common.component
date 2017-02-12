@@ -14,7 +14,10 @@
         <dependent-module archiveName="ecomerce-domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-domain/ecomerce-domain">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="ecomerce-business-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-business/ecomerce-business">
+        <dependent-module archiveName="ecomerce-security-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-security/ecomerce-security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ecomerce-business-master-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-business-master/ecomerce-business-master">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="ecomerce-web"/>

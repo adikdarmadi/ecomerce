@@ -11,7 +11,8 @@
 	<modules>
 		<module>../ecomerce-core</module>
 		<module>../ecomerce-domain</module>
-		<module>../ecomerce-business</module>
+		<module>../ecomerce-security</module>
+		<module>../ecomerce-business-master</module>
 		<module>../ecomerce-config</module>
 		<module>../ecomerce-web</module>
 	</modules>

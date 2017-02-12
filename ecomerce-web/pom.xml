@@ -11,21 +11,21 @@
 		<relativePath>../MainEcomerce/pom.xml</relativePath>
 	</parent>
 	<dependencies>
-	<dependency>
-    <groupId>io.socket</groupId>
-    <artifactId>socket.io-client</artifactId>
-    <version>0.7.0</version>
-  </dependency>
-<dependency>
-    <groupId>org.apache.httpcomponents</groupId>
-    <artifactId>httpclient</artifactId>
-    <version>4.5.2</version>
-</dependency>
-<dependency>
-    <groupId>commons-httpclient</groupId>
-    <artifactId>commons-httpclient</artifactId>
-    <version>3.1</version>
-</dependency>
+		<dependency>
+			<groupId>io.socket</groupId>
+			<artifactId>socket.io-client</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>ecomerce-config</artifactId>
@@ -46,7 +46,13 @@
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>ecomerce-business</artifactId>
+			<artifactId>ecomerce-security</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ecomerce-business-master</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
@@ -56,7 +62,7 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Javax Servlet Lib -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -78,8 +84,8 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		
-		
+
+
 
 		<!-- Spring AOP -->
 		<dependency>
@@ -95,7 +101,7 @@
 		</dependency>
 
 
-		
+
 
 		<!-- Common lib -->
 		<dependency>
@@ -167,7 +173,7 @@
 			<version>0.10</version>
 		</dependency>
 
-		
+
 
 		<!-- swagger -->
 		<dependency>
@@ -175,31 +181,31 @@
 			<artifactId>swagger-springmvc</artifactId>
 			<version>0.6.5</version>
 		</dependency>
-		
-		
+
+
 		<!-- jasper -->
 		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
 		<dependency>
-		    <groupId>com.google.zxing</groupId>
-		    <artifactId>core</artifactId>
-		    <version>2.2</version>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>2.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
 		<dependency>
-		    <groupId>com.google.zxing</groupId>
-		    <artifactId>javase</artifactId>
-		    <version>2.2</version>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>2.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.google.zxing/zxing-parent -->
 		<dependency>
-		    <groupId>com.google.zxing</groupId>
-		    <artifactId>zxing-parent</artifactId>
-		    <version>3.2.0</version>
-		    <type>pom</type>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>zxing-parent</artifactId>
+			<version>3.2.0</version>
+			<type>pom</type>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
@@ -228,18 +234,15 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>org.codehaus.groovy</groupId>
-			<artifactId>groovy-all</artifactId>
-			<version>1.8.4</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.codehaus.groovy</groupId> <artifactId>groovy-all</artifactId> 
+			<version>1.8.4</version> </dependency> -->
 
 	</dependencies>
 	<build>

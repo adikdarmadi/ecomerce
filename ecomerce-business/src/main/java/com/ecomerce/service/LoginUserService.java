@@ -11,6 +11,6 @@ import com.ecomerce.vo.LoginUserVO;
  */
 public interface LoginUserService{
 	
-	LoginUserVO signIn(AuthVO authVO) throws Exception;
+	LoginUserVO signIn(AuthVO authVO);
 
 }

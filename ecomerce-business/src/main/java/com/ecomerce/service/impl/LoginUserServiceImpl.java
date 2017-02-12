@@ -32,7 +32,7 @@ public class LoginUserServiceImpl implements LoginUserService {
 	
 	@Override
 	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-	public LoginUserVO signIn(AuthVO authVO) throws Exception {
+	public LoginUserVO signIn(AuthVO authVO)  {
 
 		List<LoginUser> loginUsers = loginUserDao.findByNamaUser(authVO.getNamaUser());
 		if (!loginUsers.isEmpty()) {

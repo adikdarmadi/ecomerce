@@ -13,13 +13,11 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ecomerce.dao.ProdukDao;
 import com.ecomerce.dao.StrukOrderDao;
 import com.ecomerce.entities.DetailKomponenHarga;
 import com.ecomerce.entities.Produk;
 import com.ecomerce.entities.StrukOrder;
 import com.ecomerce.entities.StrukOrderDetail;
-import com.ecomerce.service.ProdukService;
 import com.ecomerce.service.StrukOrderService;
 import com.ecomerce.util.CommonUtil;
 import com.ecomerce.vo.DetailKomponenHargaVO;
