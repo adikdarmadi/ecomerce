@@ -1,4 +1,4 @@
-package com.ecomerce.controller;
+/*package com.ecomerce.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ecomerce.controller.base.LocaleController;
 import com.ecomerce.core.web.WebConstants;
-import com.ecomerce.service.StrukOrderService;
 import com.ecomerce.util.rest.RestUtil;
 import com.ecomerce.vo.StrukOrderVO;
 
@@ -60,3 +59,4 @@ public class StrukOrderController extends LocaleController{
 	
 
 }
+*/
