@@ -53,26 +53,33 @@ public class AppInterceptor implements HandlerInterceptor {
 				// attribute/value from request header
 
 				String methodName = method.getAnnotation(AppPermission.class).value();
-				Authentication authentication = tokenAuthenticationService.getAuthentication(request);
-				String namaUser = authentication.getName();
-				List<LoginUser> loginUser = loginUserDao.findByNamaUser(namaUser);
-				if (loginUser.isEmpty()) {
-					// untuk testing false
+				Boolean cekAuth = tokenAuthenticationService.cekAuth(request);
+				if(cekAuth){
+					Authentication authentication = tokenAuthenticationService.getAuthentication(request);
+					String namaUser = authentication.getName();
+					List<LoginUser> loginUser = loginUserDao.findByNamaUser(namaUser);
+					if (loginUser.isEmpty()) {
+						// untuk testing false
+						response.addHeader(Constants.MessageInfo.ERROR_MESSAGE,
+								"User " + namaUser + " can not access Controller " + methodName);
+						response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+						return false;
+					}
+
+					// get user login
+					if (!loginUser.isEmpty()) {
+						LoginUser user = loginUser.get(0);
+
+						return true;
+					}
+				}else{
 					response.addHeader(Constants.MessageInfo.ERROR_MESSAGE,
-							"User " + namaUser + " can not access Controller " + methodName);
-					response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+							"User  can not access Controller " + methodName);
+					response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 					return false;
 				}
-
-				// get user login
-				if (!loginUser.isEmpty()) {
-					LoginUser user = loginUser.get(0);
-
-					return true;
-
-				}
 			}
-		} catch (Exception e) {
+		} catch (ClassCastException e) {
 			System.out.println("Not Found "+request.getRequestURL());
 		}
 		return true;

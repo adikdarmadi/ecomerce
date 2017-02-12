@@ -15,6 +15,7 @@ public class WebConstants {
 		public static final String LABEL_ERROR = "ERROR";
 		public static final String LABEL_SUCCESS_CREATED = "label-success-created";
 		public static final String LABEL_SUCCESS_OK = "label-success-ok";
+		public static final Object UNAUTHORIZED = "UNAUTHORIZED";
 	}
 
 	// HEADER KEY TOKEN

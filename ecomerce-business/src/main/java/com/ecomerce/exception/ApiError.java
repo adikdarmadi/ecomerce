@@ -1,4 +1,4 @@
-package com.ecomerce.controller;
+package com.ecomerce.exception;
 
 import java.util.Arrays;
 import java.util.List;

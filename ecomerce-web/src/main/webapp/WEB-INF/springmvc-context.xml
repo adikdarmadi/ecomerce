@@ -35,17 +35,6 @@
 		<property name="maxUploadSize" value="10000000" />
 	</bean>
 
-	<bean id="jacksonConfig"
-		class="com.ecomerce.util.rest.JacksonConfiguration">
-		<constructor-arg ref="mapper" />
-	</bean>
-	<bean id="jsonViewSupport" class="com.monitorjbl.json.JsonViewSupportFactoryBean">
-		<constructor-arg ref="mapper" />
-	</bean>
-
-	<bean id="mapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
-
-
 
 	<!-- Configuration Bean -->
 	<bean id="documentationConfig"

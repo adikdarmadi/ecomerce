@@ -30,9 +30,6 @@ public class ProdukController extends LocaleController{
 	@Autowired
 	private ProdukService produkService;
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(ProdukController.class);
-
-
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/save-produk/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String,Object>> saveProduk(@Valid @RequestBody ProdukVO entity,HttpServletRequest request) {
