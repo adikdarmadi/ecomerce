@@ -1,5 +1,0 @@
-POST : http://localhost:9090/ecomerce-web/parameter-kepuasan/save-parameter-kepuasan/
-JSON :
-{
-    "name" : "Pelayanan Pelanggan"
-}

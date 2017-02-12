@@ -1,1 +1,0 @@
-get : localhost:8080/ecomerce-web/daftar-pesan-ambulance/find-by-periode/?periodeAwal=2016-07-26&periodeAkhir=2016-07-28

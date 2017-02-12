@@ -1,4 +1,0 @@
-http://localhost:8080/ecomerce-web/service/list-generic/?view=KondisiPasien&select=*
-http://localhost:8080/ecomerce-web/service/list-generic/?view=StatusKeluar&select=*
-http://localhost:8080/ecomerce-web/service/list-generic/?view=StatusPulang&select=*
-http://localhost:8080/ecomerce-web/service/list-generic/?view=HubunganKeluarga&select=*

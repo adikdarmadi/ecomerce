@@ -1,9 +1,0 @@
-http://localhost:8080/ecomerce-web/agama/save-agama/
-{
-    "id": "",
-    "kdAgama": 0,
-    "noRec": "0c610cf2-7d41-4760-828f-801cd389",
-    "agama": "Baru",
-    "qAgama": 0
-    
-  }

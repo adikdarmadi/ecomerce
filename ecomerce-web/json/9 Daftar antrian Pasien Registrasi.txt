@@ -1,1 +1,0 @@
-http://localhost:8080/ecomerce-web/registrasi-pasien-online/antrian-pasien-list/?page=1&limit=5&ruanganId=4&dateStart=2016-05-13&dateEnd=2016-07-12

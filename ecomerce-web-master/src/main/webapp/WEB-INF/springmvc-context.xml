@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:component-scan base-package="com.ecomerce.controller" />
+	
+<!-- Configures interceptor to all controller with annotation @AppPermission -->
+	<mvc:interceptors>
+		<bean class="com.ecomerce.security.AppInterceptor" />
+		
+	</mvc:interceptors>
+
+	<!-- Configures the @Controller programming model -->
+	<mvc:annotation-driven>
+		<mvc:argument-resolvers>
+			<bean class="org.springframework.data.web.PageableArgumentResolver" />
+			<bean class="net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver"/>
+            <ref bean="customArgumentResolver" />
+		</mvc:argument-resolvers>
+	</mvc:annotation-driven>
+
+    <bean id="customArgumentResolver" class="net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver"/>
+
+	<mvc:default-servlet-handler />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- Maksimal Upload 10 MB -->
+		<property name="maxUploadSize" value="10000000" />
+	</bean>
+
+
+	<!-- Configuration Bean -->
+	<bean id="documentationConfig"
+		class="com.mangofactory.swagger.configuration.DocumentationConfig" />
+
+	<context:property-placeholder location="classpath:swagger.properties" />
+	
+	<bean id="jasperViewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename" value="views"/>
+		<property name="order" value="0"/>
+	</bean>
+	
+
+	<aop:aspectj-autoproxy /> 
+</beans>

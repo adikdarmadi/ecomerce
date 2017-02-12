@@ -1,5 +1,0 @@
-search pemeriksaan :
-http://localhost:8181/ecomerce-web/product/find-produk-by-nama?idDetailJenisProduk=1&namaProduk=oo
-
-list NEG POS :
-http://localhost:8181/ecomerce-web/enum/enum-neg-pos

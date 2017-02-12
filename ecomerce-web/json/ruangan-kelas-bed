@@ -1,6 +1,0 @@
-http://localhost:8282/ecomerce-web/service/list-generic/?view=Ruangan&select=*&criteria=departemen&values=16 --rawatinap
-
-http://localhost:8282/ecomerce-web/service/list-generic/?view=Kelas&select=*
-
-http://localhost:8282/ecomerce-web/service/list-generic/?view=Kamar&select=*&criteria=kelas&values=3&criteria=ruangan&values=66
-

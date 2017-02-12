@@ -1,5 +1,0 @@
-post : http://localhost:8080/ecomerce-web/jenis-bahan/save-jenis-bahan
-
-{  
-    "jenisBahan" : "M. Soft"
-}

@@ -1,7 +1,0 @@
-POST : http://localhost:9090/ecomerce-web/apresiasi-atas-layanan/save-apresiasi-atas-layanan/
-JSON :
-{
-    "gambarMukaKepuasan" : {
-        "id" : 1
-    }
-}

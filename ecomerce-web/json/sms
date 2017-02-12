@@ -1,7 +1,0 @@
-http://172.16.16.30:8282/ecomerce-web/registrasi-pasien-sms/save-registrasi-sms/?noCm=00000001&kodeRuangan=1&kodeDokter=1&kodeRegulerEkslusif=0&tanggal=2016-08-22
-
-http://172.16.16.30:8282/ecomerce-web/registrasi-pasien-sms/get-ruangan
-
-http://172.16.16.30:8282/ecomerce-web/registrasi-pasien-sms/get-dokter/?kodeRuangan=18&tanggal=2016-08-04
-
-http://172.16.16.30:8282/ecomerce-web/registrasi-pasien-sms/get-all-dokter
