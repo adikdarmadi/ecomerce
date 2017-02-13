@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 
+import com.ecomerce.constant.SecurityConstant;
 import com.fasterxml.jackson.core.JsonParseException;
 
 /**
@@ -32,7 +33,7 @@ public class TokenAuthenticationService {
 	public Boolean cekAuth(HttpServletRequest request)
 			throws JsonParseException {
 		
-		String token = request.getHeader(WebConstants.AUTH_HEADER_NAME);
+		String token = request.getHeader(SecurityConstant.AUTH_HEADER_NAME);
 		if (token != null) {
 			try {
 				final User user = tokenHandler.parseUserFromToken(token);
@@ -50,7 +51,7 @@ public class TokenAuthenticationService {
 				if(request.getQueryString()=="")return null;
 				final String[] tokens= request.getQueryString().split("&");
 				for (String tokenTemp : tokens) {
-					if(tokenTemp.toLowerCase().indexOf(WebConstants.AUTH_HEADER_NAME.toLowerCase())>=0)
+					if(tokenTemp.toLowerCase().indexOf(SecurityConstant.AUTH_HEADER_NAME.toLowerCase())>=0)
 					{
 						token =tokenTemp.split("=")[1];
 						final User user = tokenHandler.parseUserFromToken(token);
@@ -73,7 +74,7 @@ public class TokenAuthenticationService {
 	public Authentication getAuthentication(HttpServletRequest request)
 			throws JsonParseException {
 		
-		String token = request.getHeader(WebConstants.AUTH_HEADER_NAME);
+		String token = request.getHeader(SecurityConstant.AUTH_HEADER_NAME);
 		if (token != null) {
 			try {
 				final User user = tokenHandler.parseUserFromToken(token);
@@ -92,7 +93,7 @@ public class TokenAuthenticationService {
 				if(request.getQueryString()=="")return null;
 				final String[] tokens= request.getQueryString().split("&");
 				for (String tokenTemp : tokens) {
-					if(tokenTemp.toLowerCase().indexOf(WebConstants.AUTH_HEADER_NAME.toLowerCase())>=0)
+					if(tokenTemp.toLowerCase().indexOf(SecurityConstant.AUTH_HEADER_NAME.toLowerCase())>=0)
 					{
 						token =tokenTemp.split("=")[1];
 						final User user = tokenHandler.parseUserFromToken(token);

@@ -1,7 +1,5 @@
 package com.ecomerce.vo;
 
-import com.ecomerce.base.vo.BaseMasterVO;
-
 /**
  *  class Agama
  * 
@@ -9,7 +7,7 @@ import com.ecomerce.base.vo.BaseMasterVO;
  */
 //@Entity
 //@Table(name = "Agama_M")
-public class AgamaVO extends BaseMasterVO {
+public class AgamaVO  {
 
 	private Integer id;
 	

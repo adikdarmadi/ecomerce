@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.ecomerce.constants.Constants;
+import com.ecomerce.constant.SecurityConstant;
 
 /**
  * SpringSecurityConfig class
@@ -35,7 +35,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 		super(true);
 		this.userService = new UserService();
 		tokenAuthenticationService = new TokenAuthenticationService(
-				Constants.ecomerce, userService);
+				SecurityConstant.ecomerce, userService);
 	}
 
 	@Override

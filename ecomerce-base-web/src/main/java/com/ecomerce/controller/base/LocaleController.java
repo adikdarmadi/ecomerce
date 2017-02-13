@@ -13,14 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ecomerce.base.vo.BaseMasterVO;
-import com.ecomerce.constants.Constants;
-import com.ecomerce.core.web.WebConstants;
+import com.ecomerce.constant.BaseConstant;
+
 
 /**
  * Base Controller Class for handling messaga resource for internationalization
@@ -28,7 +26,7 @@ import com.ecomerce.core.web.WebConstants;
  * 
  * @author Roberto
  */
-public abstract class LocaleController<V extends BaseMasterVO> {
+public abstract class LocaleController<V> {
 	/*
 	 * messageSource bean injected for each controller for accessing message
 	 * source
@@ -93,7 +91,7 @@ public abstract class LocaleController<V extends BaseMasterVO> {
 	 * default locale ID
 	 */
 	protected String getMessage(String code) {
-		return messageSource.getMessage(code, null, new Locale(Constants.Locale.INA));
+		return messageSource.getMessage(code, null, new Locale(BaseConstant.Locale.INA));
 	}
 
 	protected void addHeaderMessage(String key, String message) {
@@ -104,7 +102,7 @@ public abstract class LocaleController<V extends BaseMasterVO> {
 	public String getCoociesLanguage(HttpServletRequest request) {
 		Cookie cookie[] = request.getCookies();
 		Cookie cook;
-		String lang = Constants.Locale.INA;
+		String lang = BaseConstant.Locale.INA;
 		if (cookie != null) {
 			for (int i = 0; i < cookie.length; i++) {
 				cook = cookie[i];

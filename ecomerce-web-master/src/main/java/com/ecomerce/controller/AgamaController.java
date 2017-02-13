@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecomerce.constant.BaseConstant;
 import com.ecomerce.controller.base.LocaleController;
-import com.ecomerce.core.web.WebConstants;
 import com.ecomerce.service.AgamaService;
 import com.ecomerce.util.rest.RestUtil;
 
@@ -34,9 +34,9 @@ public class AgamaController extends LocaleController{
 	public ResponseEntity<Map<String,Object>> getStrukOrder() {
 		Map<String, Object> result = new HashMap<String, Object>();
 		result = agamaService.findCountAgama();
-		mapHeaderMessage.put(WebConstants.STATUS, HttpStatus.OK.name());
-		mapHeaderMessage.put(WebConstants.STATUS_CODE, HttpStatus.OK.toString());
-		mapHeaderMessage.put(WebConstants.MESSAGE, WebConstants.HttpHeaderInfo.LABEL_SUCCESS);
+		mapHeaderMessage.put(BaseConstant.STATUS, HttpStatus.OK.name());
+		mapHeaderMessage.put(BaseConstant.STATUS_CODE, HttpStatus.OK.toString());
+		mapHeaderMessage.put(BaseConstant.MESSAGE, HttpStatus.OK.toString());
 		return RestUtil.getJsonResponse(result, HttpStatus.OK, mapHeaderMessage);
 		
 	}

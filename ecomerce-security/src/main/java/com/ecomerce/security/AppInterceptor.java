@@ -14,7 +14,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ecomerce.constants.Constants;
+import com.ecomerce.constant.SecurityConstant;
 import com.ecomerce.dao.LoginUserDao;
 import com.ecomerce.entities.LoginUser;
 
@@ -60,7 +60,7 @@ public class AppInterceptor implements HandlerInterceptor {
 					List<LoginUser> loginUser = loginUserDao.findByNamaUser(namaUser);
 					if (loginUser.isEmpty()) {
 						// untuk testing false
-						response.addHeader(Constants.MessageInfo.ERROR_MESSAGE,
+						response.addHeader(SecurityConstant.MessageInfo.ERROR_MESSAGE,
 								"User " + namaUser + " can not access Controller " + methodName);
 						response.setStatus(HttpServletResponse.SC_FORBIDDEN);
 						return false;
@@ -73,7 +73,7 @@ public class AppInterceptor implements HandlerInterceptor {
 						return true;
 					}
 				}else{
-					response.addHeader(Constants.MessageInfo.ERROR_MESSAGE,
+					response.addHeader(SecurityConstant.MessageInfo.ERROR_MESSAGE,
 							"User  can not access Controller " + methodName);
 					response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 					return false;

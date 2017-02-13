@@ -15,9 +15,10 @@
             <version>${org.hibernate.version}</version>
         </dependency>
 
+
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>ecomerce-core</artifactId>
+			<artifactId>ecomerce-config</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

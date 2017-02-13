@@ -8,13 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.envers.Audited;
-
-import com.ecomerce.base.BaseMaster;
-import com.ecomerce.helper.Caption;
-
-import org.hibernate.envers.Audited;
-
 /**
  *  class Agama
  * 
@@ -22,7 +15,7 @@ import org.hibernate.envers.Audited;
  */
 @Entity //@Audited
 @Table(name = "m_agama")
-public class Agama extends BaseMaster {
+public class Agama  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,7 +24,6 @@ public class Agama extends BaseMaster {
 	
 	@NotNull(message="Agama tidak boleh kosong")
 	@Column(name = "Agama", nullable = false , length = 100)
-	@Caption(value="Agama")
 	private String agama;
 
 	public Integer getId() {

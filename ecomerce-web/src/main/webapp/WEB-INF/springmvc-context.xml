@@ -20,12 +20,9 @@
 	<mvc:annotation-driven>
 		<mvc:argument-resolvers>
 			<bean class="org.springframework.data.web.PageableArgumentResolver" />
-			<bean class="net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver"/>
-            <ref bean="customArgumentResolver" />
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 
-    <bean id="customArgumentResolver" class="net.kaczmarzyk.spring.data.jpa.web.SpecificationArgumentResolver"/>
 
 	<mvc:default-servlet-handler />
 

@@ -1,12 +1,5 @@
 package com.ecomerce.vo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import com.ecomerce.base.vo.BaseMasterVO;
-import com.ecomerce.helper.Caption;
-
 /**
  *  class Agama
  * 

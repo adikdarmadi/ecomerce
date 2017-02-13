@@ -14,10 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.ecomerce.base.BaseMaster;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
  * class Produk
@@ -28,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 @Table(name = "t_struk_order")
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
-public class StrukOrder extends BaseMaster {
+public class StrukOrder {
 
 
     @Id

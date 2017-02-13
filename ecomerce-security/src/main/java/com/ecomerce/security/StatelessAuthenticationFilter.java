@@ -18,8 +18,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
-import com.ecomerce.constants.Constants;
-import com.ecomerce.core.web.WebConstants;
+import com.ecomerce.constant.SecurityConstant;
 import com.ecomerce.util.CommonUtil;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -66,9 +65,9 @@ public class StatelessAuthenticationFilter extends GenericFilterBean {
 					ObjectMapper mapper = new ObjectMapper();
 					String json = "";
 					Map<String, Object> map = new HashMap<String, Object>();
-					map.put(WebConstants.STATUS, HttpStatus.UNAUTHORIZED.name());
-					map.put(WebConstants.STATUS_CODE, HttpStatus.UNAUTHORIZED.toString());
-					map.put(WebConstants.MESSAGE, WebConstants.HttpHeaderInfo.UNAUTHORIZED);
+					map.put(SecurityConstant.STATUS, HttpStatus.UNAUTHORIZED.name());
+					map.put(SecurityConstant.STATUS_CODE, HttpStatus.UNAUTHORIZED.toString());
+					map.put(SecurityConstant.MESSAGE, HttpStatus.UNAUTHORIZED.toString());
 
 					// convert map to JSON string
 					json = mapper.writeValueAsString(map);
@@ -91,7 +90,7 @@ public class StatelessAuthenticationFilter extends GenericFilterBean {
 			}
 		} catch (JsonParseException | MalformedJwtException e) {
 			HttpServletResponse httpResponse = (HttpServletResponse) response;
-			httpResponse.addHeader(Constants.MessageInfo.ERROR_MESSAGE,"Error Token (Not Valid Token)");
+			httpResponse.addHeader(SecurityConstant.MessageInfo.ERROR_MESSAGE,"Error Token (Not Valid Token)");
 			filterChain.doFilter(request, response);
 		}
 	}
