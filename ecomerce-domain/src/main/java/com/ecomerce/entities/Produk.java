@@ -34,7 +34,7 @@ public class Produk {
     @JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_detail_jenis_produk")
-	@NotNull(message = "Produk Tidak Boleh Kosong")
+	@NotNull(message = "Detail Jenis Produk Tidak Boleh Kosong")
 	private DetailJenisProduk detailJenisProduk;
 
 	@NotNull(message = "Nama Produk Tidak Boleh Kosong")
