@@ -19,6 +19,11 @@
     <buildCommand>
       <name>org.eclipse.m2e.core.maven2Builder</name>
     </buildCommand>
+	<build>
+    
+		<sourceEncoding>UTF-8</sourceEncoding>
+	  
+	  </build>
   </buildSpec>
   <natures>
     <nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
@@ -28,8 +33,4 @@
     <nature>org.eclipse.wst.common.project.facet.core.nature</nature>
     <nature>org.eclipse.wst.jsdt.core.jsNature</nature>
   </natures>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-</properties>
 </projectDescription>

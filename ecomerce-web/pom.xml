@@ -58,7 +58,7 @@
 		
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>ecomerce-base-web</artifactId>
+			<artifactId>ecomerce-web-base</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
@@ -69,13 +69,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Javax Servlet Lib -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servlet.version}</version>
-			<scope>provided</scope>
-		</dependency>
+		
 
 		<!-- Spring MVC -->
 		<dependency>
@@ -232,6 +226,13 @@
 			<version>2.1.7</version>
 		</dependency>
 
+	<!-- Javax Servlet Lib -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>commons-digester</groupId>

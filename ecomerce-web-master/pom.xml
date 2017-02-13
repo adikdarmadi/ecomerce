@@ -58,7 +58,7 @@
 		
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>ecomerce-base-web</artifactId>
+			<artifactId>ecomerce-web-base</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

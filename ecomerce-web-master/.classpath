@@ -16,11 +16,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-business-master"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-config"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-domain"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecomerce-security"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
