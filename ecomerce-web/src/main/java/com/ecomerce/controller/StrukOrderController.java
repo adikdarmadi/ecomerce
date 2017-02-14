@@ -1,4 +1,4 @@
-/*package com.ecomerce.controller;
+package com.ecomerce.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecomerce.constant.BaseConstant;
 import com.ecomerce.controller.base.LocaleController;
-import com.ecomerce.core.web.WebConstants;
+import com.ecomerce.service.StrukOrderService;
 import com.ecomerce.util.rest.RestUtil;
 import com.ecomerce.vo.StrukOrderVO;
 
@@ -39,9 +40,9 @@ public class StrukOrderController extends LocaleController{
 	@RequestMapping(value = "/save-strukOrder/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String,Object>> saveStrukOrder(@Valid @RequestBody StrukOrderVO entity,HttpServletRequest request) {
 		Map<String, Object> result = strukOrderService.saveStrukOrder(entity);
-		mapHeaderMessage.put(WebConstants.STATUS,HttpStatus.CREATED.name());
-		mapHeaderMessage.put(WebConstants.STATUS_CODE,HttpStatus.CREATED.toString());
-		mapHeaderMessage.put(WebConstants.MESSAGE, WebConstants.HttpHeaderInfo.LABEL_SUCCESS);
+		mapHeaderMessage.put(BaseConstant.STATUS,HttpStatus.CREATED.name());
+		mapHeaderMessage.put(BaseConstant.STATUS_CODE,HttpStatus.CREATED.toString());
+		mapHeaderMessage.put(BaseConstant.MESSAGE, BaseConstant.HttpHeaderInfo.LABEL_SUCCESS);
 		return RestUtil.getJsonResponse(result, HttpStatus.CREATED, mapHeaderMessage);
 		
 	}
@@ -51,12 +52,11 @@ public class StrukOrderController extends LocaleController{
 	@RequestMapping(value = "/kartu-pengendali-list",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String,Object>> getStrukOrder() {
 		Map<String, Object> result = strukOrderService.findAll();
-		mapHeaderMessage.put(WebConstants.STATUS,HttpStatus.OK.name());
-		mapHeaderMessage.put(WebConstants.STATUS_CODE,HttpStatus.OK.toString());
-		mapHeaderMessage.put(WebConstants.MESSAGE, WebConstants.HttpHeaderInfo.LABEL_SUCCESS);
+		mapHeaderMessage.put(BaseConstant.STATUS,HttpStatus.OK.name());
+		mapHeaderMessage.put(BaseConstant.STATUS_CODE,HttpStatus.OK.toString());
+		mapHeaderMessage.put(BaseConstant.MESSAGE, BaseConstant.HttpHeaderInfo.LABEL_SUCCESS);
 		return RestUtil.getJsonResponse(result, HttpStatus.OK, mapHeaderMessage);
 	}
 	
 
 }
-*/
