@@ -2,7 +2,10 @@
 <projectDescription>
   <name>ecomerce-security</name>
   <comment>Module MainEcomerce untuk Service, Business &amp; Reposirtory. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>ecomerce-domain</project>
+    <project>ecomerce-config</project>
+  </projects>
   <buildSpec>
     <buildCommand>
       <name>org.eclipse.wst.common.project.facet.core.builder</name>

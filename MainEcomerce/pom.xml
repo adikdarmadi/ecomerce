@@ -9,10 +9,11 @@
 	<inceptionYear>2016</inceptionYear>
 	<description>MainEcomerce</description>
 	<modules>
+		<module>../ecomerce-config</module>
 		<module>../ecomerce-domain</module>
 		<module>../ecomerce-security</module>
 		<module>../ecomerce-business-master</module>
-		<module>../ecomerce-config</module>
+		<module>../ecomerce-business-sales</module>
 		<module>../ecomerce-web-base</module>
 		<module>../ecomerce-web-master</module>
 		<module>../ecomerce-web-sales</module>

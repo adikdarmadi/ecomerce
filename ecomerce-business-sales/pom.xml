@@ -53,8 +53,6 @@
 			<version>${project.version}</version>
 		</dependency>
 
-
-
 	</dependencies>
 	<organization>
 		<name>Jasa Medika</name>

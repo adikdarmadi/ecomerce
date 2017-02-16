@@ -2,7 +2,13 @@
 <projectDescription>
   <name>ecomerce-web-master</name>
   <comment>Module MainEcomerce untuk Web / Controller. Tempat API diexpose oleh REST Client. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>ecomerce-config</project>
+    <project>ecomerce-domain</project>
+    <project>ecomerce-security</project>
+    <project>ecomerce-business-master</project>
+    <project>ecomerce-web-base</project>
+  </projects>
   <buildSpec>
     <buildCommand>
       <name>org.eclipse.wst.jsdt.core.javascriptValidator</name>

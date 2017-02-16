@@ -6,6 +6,7 @@
     <project>ecomerce-config</project>
     <project>ecomerce-domain</project>
     <project>ecomerce-security</project>
+    <project>ecomerce-business-sales</project>
     <project>ecomerce-web-base</project>
   </projects>
   <buildSpec>
