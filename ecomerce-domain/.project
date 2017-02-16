@@ -2,7 +2,9 @@
 <projectDescription>
   <name>ecomerce-domain</name>
   <comment>Module MainEcomerce untuk Domain Aplikasi -&gt; Entities dan Virtual Object (VO). NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>ecomerce-config</project>
+  </projects>
   <buildSpec>
     <buildCommand>
       <name>org.eclipse.wst.common.project.facet.core.builder</name>

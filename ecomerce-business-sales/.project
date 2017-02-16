@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>ecomerce-business-master</name>
+  <name>ecomerce-business-sales</name>
   <comment>Module MainEcomerce untuk Service, Business &amp; Reposirtory. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects/>
   <buildSpec>

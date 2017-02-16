@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportReservasi" language="java" pageWidth="576" pageHeight="288" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d0611b72-3035-4a21-9380-8d0ff72fe2e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tanggalReport" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String"/>
+	<field name="ruangan.namaRuangan" class="java.lang.String"/>
+	<field name="pegawai.namaLengkap" class="java.lang.String"/>
+	<field name="noReservasi" class="java.lang.String"/>
+	<field name="tglReservasi" class="java.util.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<image>
+				<reportElement uuid="9207aa8d-bef3-4cd2-b7b5-caa1efe7393f" x="91" y="4" width="441" height="50"/>
+				<imageExpression><![CDATA["C:\\harkit_report\\master\\images\\logoHarkit.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="977bfdf2-e2e7-44ae-b7be-bc5228bb7d94" x="28" y="54" width="413" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Jl. Letjend. S. Parman Kav. 87, Slipi,Jakarta Barat 11420 – Indonesia  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0ab47bc-7964-47a8-9688-3130e5ea444e" x="28" y="68" width="413" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telp 021 5668284]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="101" splitType="Stretch">
+			<image>
+				<reportElement uuid="c3e626d9-f724-4615-b0ec-86db43c18fcb" x="28" y="1" width="79" height="77"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.qrcode.QRCodeWriter().encode($F{noReservasi},
+         com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="a9468f4d-93e4-4dd5-aa9a-eedc3373836e" x="111" y="8" width="101" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Ruangan yang Dituju]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8d04eaff-2bee-4aba-baea-be9ddd394963" x="221" y="8" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ruangan.namaRuangan}!=null?$F{ruangan.namaRuangan}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e130c699-c49e-4b6c-b531-dbf7dec538ad" x="111" y="28" width="101" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Dokter]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4460b79a-672b-45af-84de-e0716ea83fc1" x="221" y="28" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pegawai.namaLengkap}!=null?$F{pegawai.namaLengkap}:""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4e983c44-8ed0-4077-8024-caffe157dd40" x="111" y="48" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Reservasi]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b292e57f-41ca-444b-9bf4-5d4cab4f8e92" x="221" y="48" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd-mm-yyyy").format($F{tglReservasi})!=null?new SimpleDateFormat("dd-MM-yyyy").format($F{tglReservasi}):""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
