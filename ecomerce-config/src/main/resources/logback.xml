@@ -12,7 +12,7 @@
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- ganti file setiap jam -->
 			<fileNamePattern>
-				${catalina.home:-.}/logs/%d{yyyy-MM-dd_HH}/coba-${spring.profiles.active:-development}.log
+				${catalina.home:-.}/logs/%d{yyyy-MM-dd_HH}/logging.log
 			</fileNamePattern>
 
 			<!-- simpan file selama sebulan (24 * 31) -->

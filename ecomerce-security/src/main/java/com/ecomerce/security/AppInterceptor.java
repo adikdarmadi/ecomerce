@@ -1,5 +1,6 @@
 package com.ecomerce.security;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +24,7 @@ import com.ecomerce.constant.SecurityConstant;
 import com.ecomerce.dao.LoginUserDao;
 import com.ecomerce.entities.LoginUser;
 import com.ecomerce.util.CommonUtil;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -40,15 +42,9 @@ public class AppInterceptor implements HandlerInterceptor {
 	@Autowired
 	private LoginUserDao loginUserDao;
 
-	// @Autowired
-	// private MapLoginUserToRuanganDao mapLoginUserToRuanganDao;
-
 	public AppInterceptor() {
 	}
 
-	/*
-	 * return true untuk valid permission request ke controller method
-	 */
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
@@ -68,60 +64,21 @@ public class AppInterceptor implements HandlerInterceptor {
 					for (String hakAkses : list) {
 						
 						if (hakAkses.equalsIgnoreCase("IS_ADD")) {
-							System.out.println("hak akses is add");
 							isLogin = true;
-							break;
 						} else if (hakAkses.equalsIgnoreCase("IS_CONFIRM")) {
-							System.out.println("hak akses is confirm");
 							isLogin = true;
 						}
 					}
 					if (isLogin) {
 						return true;
 					} else {
-						ObjectMapper mapper = new ObjectMapper();
-						String json = "";
-						Map<String, Object> map = new HashMap<String, Object>();
-						map.put(SecurityConstant.STATUS, HttpStatus.UNAUTHORIZED.name());
-						map.put(SecurityConstant.STATUS_CODE, HttpStatus.UNAUTHORIZED.toString());
-						map.put(SecurityConstant.MESSAGE, HttpStatus.UNAUTHORIZED.toString());
-
-						// convert map to JSON string
-						json = mapper.writeValueAsString(map);
-
-
-						json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
-
-						
-						response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-						response.setContentType("application/json");
-						response.getWriter().write(json);
-						response.getWriter().flush();
-						response.getWriter().close();						
+						setUnautorized(response);
 						return false;
 					}
 				}
 			}
 		} catch (Exception e) {
-
-			ObjectMapper mapper = new ObjectMapper();
-			String json = "";
-			Map<String, Object> map = new HashMap<String, Object>();
-			map.put(SecurityConstant.STATUS, HttpStatus.NOT_FOUND.name());
-			map.put(SecurityConstant.STATUS_CODE, HttpStatus.NOT_FOUND.toString());
-			map.put(SecurityConstant.MESSAGE, HttpStatus.NOT_FOUND.toString());
-
-			// convert map to JSON string
-			json = mapper.writeValueAsString(map);
-
-			json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
-
-			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-			response.setContentType("application/json");
-			response.getWriter().write(json);
-			response.getWriter().flush();
-			response.getWriter().close();
-			
+			setNotFound(response);
 		}
 		return true;
 	}
@@ -134,6 +91,59 @@ public class AppInterceptor implements HandlerInterceptor {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object obj, ModelAndView mav)
 			throws Exception {
+	}
+	
+	public void setUnautorized(HttpServletResponse response) throws IOException{
+		ObjectMapper mapper = new ObjectMapper();
+		String json = "";
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put(SecurityConstant.STATUS, HttpStatus.UNAUTHORIZED.name());
+		map.put(SecurityConstant.STATUS_CODE, HttpStatus.UNAUTHORIZED.toString());
+		map.put(SecurityConstant.MESSAGE, HttpStatus.UNAUTHORIZED.toString());
+
+		// convert map to JSON string
+		try {
+			json = mapper.writeValueAsString(map);
+			json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
+			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+			response.setContentType("application/json");
+			response.getWriter().write(json);
+			response.getWriter().flush();
+			response.getWriter().close();						
+
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void setNotFound(HttpServletResponse response) throws IOException {
+
+		ObjectMapper mapper = new ObjectMapper();
+		String json = "";
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put(SecurityConstant.STATUS, HttpStatus.NOT_FOUND.name());
+		map.put(SecurityConstant.STATUS_CODE, HttpStatus.NOT_FOUND.toString());
+		map.put(SecurityConstant.MESSAGE, HttpStatus.NOT_FOUND.toString());
+
+		// convert map to JSON string
+		try {
+			json = mapper.writeValueAsString(map);
+			json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
+
+			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			response.setContentType("application/json");
+			response.getWriter().write(json);
+			response.getWriter().flush();
+			response.getWriter().close();
+			
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+
 	}
 
 }

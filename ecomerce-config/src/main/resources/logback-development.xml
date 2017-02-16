@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <included>
 
-	<logger name="org.hibernate.SQL" level="TRACE">
+	<logger name="org.hibernate.SQL" level="ERROR">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </logger>
@@ -13,7 +13,7 @@
 	 -->
 
 	<!-- log for certain package -->
-	<!-- <logger name="com.ecomerce.medifirst2000.business.impl" level="DEBUG">
+	<!-- <logger name="com.jasamedika.medifirst2000.business.impl" level="DEBUG">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</logger>

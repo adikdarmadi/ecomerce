@@ -10,9 +10,7 @@ import com.ecomerce.vo.LoginUserVO;
  * 
  * @author Roberto
  */
-public interface LoginUserService{
-	
-	LoginUserVO signIn(AuthVO authVO);
+public interface UserService{
 	
 	LoginUser getLoginUser();
 

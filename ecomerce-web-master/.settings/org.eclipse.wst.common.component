@@ -17,6 +17,9 @@
         <dependent-module archiveName="ecomerce-business-master-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-business-master/ecomerce-business-master">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="ecomerce-business-base-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-business-base/ecomerce-business-base">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="ecomerce-web-base-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ecomerce-web-base/ecomerce-web-base">
             <dependency-type>uses</dependency-type>
         </dependent-module>
