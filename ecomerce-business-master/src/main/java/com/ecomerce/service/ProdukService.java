@@ -12,8 +12,10 @@ import com.ecomerce.vo.ProdukVO;
  */
 public interface ProdukService {
 
-	Map<String, Object> findByIdProduk();
+	Map<String, Object> findAllProduk();
 
 	Map<String, Object> saveProduk(ProdukVO p);
+
+	Map<String, Object> findById(Integer id);
 
 }

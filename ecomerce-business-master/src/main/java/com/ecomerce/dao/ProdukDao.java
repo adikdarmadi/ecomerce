@@ -15,5 +15,7 @@ public interface ProdukDao extends PagingAndSortingRepository<Produk, Integer> {
 	@Query("select new map (p.id as id,p.namaProduk as namaProduk) from Produk p  ")
 	List<Map<String,Object>> findAllProduk();
 
+	Produk findById(Integer id);
+
 
 }

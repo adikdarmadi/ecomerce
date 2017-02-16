@@ -57,7 +57,7 @@ public class StatelessAuthenticationFilter extends GenericFilterBean {
 		
 			authentication = authenticationService.getAuthentication(httpRequest);
 			if(CommonUtil.isNullOrEmpty(authentication)){
-				if(httpRequest.getRequestURI().equalsIgnoreCase("/ecomerce-web/auth/sign-in") || httpRequest.getRequestURI().equalsIgnoreCase("/ecomerce-web/auth/sign-in/")){
+				if(httpRequest.getRequestURI().equalsIgnoreCase("/ecomerce-web-master/auth/sign-in") || httpRequest.getRequestURI().equalsIgnoreCase("/ecomerce-web/auth/sign-in/")){
 					SecurityContextHolder.getContext().setAuthentication(authentication);
 					filterChain.doFilter(request, response);
 					SecurityContextHolder.getContext().setAuthentication(null);
