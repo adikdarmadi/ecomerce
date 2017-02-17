@@ -13,7 +13,7 @@ import com.ecomerce.util.AgeCalculator;
 /**
  * The Class AgeCalculatorTest.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class AgeCalculatorTest {
 

@@ -11,7 +11,7 @@ import com.ecomerce.dao.custom.AgamaDaoCustom;
 /**
  * Repository Custom class
  * 
- * @author Roberto
+ * @author Adik
  */
 @Repository("AgamaDaoCustom")
 public class AgamaDaoCustomImpl  implements AgamaDaoCustom {

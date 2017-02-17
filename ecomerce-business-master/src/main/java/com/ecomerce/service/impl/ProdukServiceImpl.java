@@ -31,13 +31,16 @@ public class ProdukServiceImpl implements ProdukService {
 	private ModelMapper modelMapper = new ModelMapper();
 
 	@Override
+	@Transactional(readOnly=false)
 	public Map<String,Object> saveProduk(ProdukVO p) {
-		LOGGER.info(userService.getLoginUser().getNamaUser() +" save produk execute");
+		//LOGGER.info(userService.getLoginUser().getNamaUser() +" save produk execute");
 		Produk model=modelMapper.map(p, Produk.class);
 		Produk produk=produkDao.save(model);
 		Map<String,Object> result=new HashMap<String,Object>(); 
 		result.put("id", produk.getId());
 		result.put("namaProduk", produk.getNamaProduk());
+		Integer a=null;
+		Integer b=a/100;
 		return result;
 	}
 	

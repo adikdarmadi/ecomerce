@@ -193,7 +193,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
     
 
     // "500"
-
+/*
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
     	final StringBuilder builder = new StringBuilder();
@@ -205,6 +205,6 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         data.add(rm);
         final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, "ERROR", data,"500");
         return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
-    }
+    }*/
 
 }

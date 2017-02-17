@@ -71,11 +71,7 @@ public class StatelessAuthenticationFilter extends GenericFilterBean {
 
 					// convert map to JSON string
 					json = mapper.writeValueAsString(map);
-
-
 					json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
-
-					
 					res.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 					res.setContentType("application/json");
 					res.getWriter().write(json);

@@ -4,7 +4,7 @@ package com.ecomerce.util;
  * String utility class. untuk kebutuhan khusus di luar fungsi-fungsi StringUtil
  * apache common lib
  * 
- * @author Roberto
+ * @author Adik
  */
 public final class StringUtil {
 

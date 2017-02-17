@@ -13,7 +13,7 @@ import com.ecomerce.util.DateUtil;
 /**
  * The Class DateUtilTest.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class DateUtilTest {
 

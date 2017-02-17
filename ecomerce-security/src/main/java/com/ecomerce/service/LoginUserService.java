@@ -8,7 +8,7 @@ import com.ecomerce.vo.LoginUserVO;
 /**
  * LoginUser Service
  * 
- * @author Roberto
+ * @author Adik
  */
 public interface LoginUserService{
 	

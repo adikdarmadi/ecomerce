@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * AppPermission annotation, digunakan untuk method yang butuh authorized dari database
  * can use in method only.
- * @author Roberto
+ * @author Adik
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

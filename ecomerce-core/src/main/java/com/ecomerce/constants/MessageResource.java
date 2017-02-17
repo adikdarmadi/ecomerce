@@ -4,7 +4,7 @@ package com.ecomerce.constants;
  * MessageResource class is that consist of list key in message resource for
  * internationalization
  * 
- * @author Roberto
+ * @author adik
  */
 public final class MessageResource {
 	public static final String LABEL_SUCCESS = "label.success";

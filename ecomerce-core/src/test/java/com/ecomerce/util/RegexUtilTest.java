@@ -11,7 +11,7 @@ import com.ecomerce.util.StringUtil;
 /**
  * The Class RegexUtilTest.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class RegexUtilTest {
 

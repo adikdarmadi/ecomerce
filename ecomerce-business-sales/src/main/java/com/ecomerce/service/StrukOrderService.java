@@ -9,7 +9,7 @@ import com.ecomerce.vo.StrukOrderVO;
 /**
  * Agama Service
  * 
- * @author Roberto
+ * @author Adik
  */
 public interface StrukOrderService {
 

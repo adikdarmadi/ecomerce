@@ -2,7 +2,7 @@ package com.ecomerce.dao.custom;
 
 /**
  * 
- * @author Roberto
+ * @author Adik
  */
 public interface AgamaDaoCustom  {
 

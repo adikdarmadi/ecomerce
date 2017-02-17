@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 /**
  * The Class IndonesianNumberToWords.
  * 
- * @author Roberto
+ * @author Adik
  */
 public final class IndonesianNumberToWords implements Serializable {
 

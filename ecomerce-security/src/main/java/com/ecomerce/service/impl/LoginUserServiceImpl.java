@@ -21,7 +21,7 @@ import com.ecomerce.vo.LoginUserVO;
 /**
  * Implement class for LoginUserService
  * 
- * @author Roberto
+ * @author Adik
  */
 @Service("LoginUserService")
 public class LoginUserServiceImpl implements LoginUserService {
@@ -59,7 +59,7 @@ public class LoginUserServiceImpl implements LoginUserService {
 			return vo;
 
 		} else {
-			throw new RuntimeException("User account is unauthorized : username : " + authVO.getNamaUser());
+			return null;
 		}
 	}
 

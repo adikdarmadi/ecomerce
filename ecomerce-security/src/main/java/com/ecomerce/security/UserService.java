@@ -17,7 +17,7 @@ import com.ecomerce.entities.LoginUser;
 /**
  * UserService implements org.springframework.security.core.userdetails.UserDetailsService
  * 
- * @author Roberto
+ * @author Adik
  */
 public class UserService implements
 		org.springframework.security.core.userdetails.UserDetailsService {

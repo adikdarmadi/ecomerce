@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 /**
  * Rest Util Class
  * 
- * @author Roberto
+ * @author Adik
  */
 public class RestUtil {
 

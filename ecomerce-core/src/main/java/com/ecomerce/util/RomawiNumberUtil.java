@@ -6,7 +6,7 @@ import java.util.TreeMap;
 /**
  * The Class RomawiNumberUtil.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class RomawiNumberUtil {
 

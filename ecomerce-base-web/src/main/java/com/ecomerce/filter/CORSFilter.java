@@ -19,7 +19,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 /**
  * CORSFilter class
  * 
- * @author Roberto
+ * @author Adik
  */
 @Component
 public class CORSFilter implements Filter  {
@@ -52,7 +52,6 @@ public class CORSFilter implements Filter  {
 
 	@Override
 	public void init(FilterConfig filterConfig) {
-		log.info("yihaaaaaaaaaaa");
 	}
 
 	@Override

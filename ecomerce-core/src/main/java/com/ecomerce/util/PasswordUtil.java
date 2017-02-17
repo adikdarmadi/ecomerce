@@ -16,7 +16,7 @@ import org.apache.commons.logging.LogFactory;
  * This is a utility that related with password. most of the code is inspired
  * from http://www.owasp.org/index.php/Hashing_Java
  * 
- * @author Roberto
+ * @author Adik
  * 
  */
 public class PasswordUtil implements Serializable {

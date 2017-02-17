@@ -12,7 +12,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 /**
  * TokenAuthenticationService class
  * 
- * @author Roberto
+ * @author Adik
  */
 public class TokenAuthenticationService {
 

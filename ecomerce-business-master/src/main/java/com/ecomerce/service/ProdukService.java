@@ -8,7 +8,7 @@ import com.ecomerce.vo.ProdukVO;
 /**
  * Agama Service
  * 
- * @author Roberto
+ * @author Adik
  */
 public interface ProdukService {
 

@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.User;
 /**
  * UserAuthentication class
  * 
- * @author Roberto
+ * @author Adik
  */
 public class UserAuthentication implements Authentication {
 	/**

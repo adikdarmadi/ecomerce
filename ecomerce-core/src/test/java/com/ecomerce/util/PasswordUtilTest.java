@@ -14,7 +14,7 @@ import com.ecomerce.util.PasswordUtil;
 /**
  * The Class PasswordUtilTest.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class PasswordUtilTest {
 

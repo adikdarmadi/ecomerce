@@ -11,7 +11,7 @@ import com.ecomerce.entities.LoginUser;
 /**
  * Repository class for Departemen
  * 
- * @author Roberto
+ * @author Adik
  */
 @Repository("UserDao")
 public interface UserDao extends PagingAndSortingRepository<LoginUser, Integer> {

@@ -30,7 +30,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Interceptor class for All annotation method controller @AppPermission
  * 
- * @author Roberto
+ * @author Adik
  */
 public class AppInterceptor implements HandlerInterceptor {
 

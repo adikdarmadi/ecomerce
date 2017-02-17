@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecomerce.constant.BaseConstant;
 import com.ecomerce.security.TokenAuthenticationService;
 import com.ecomerce.security.UserAuthentication;
 import com.ecomerce.service.LoginUserService;
@@ -33,7 +34,7 @@ import com.ecomerce.vo.LoginUserVO;
 /**
  * Controller class for Authenticate Business
  * 
- * @author Roberto
+ * @author Adik
  */
 @RestController
 @RequestMapping("/auth")
@@ -58,25 +59,22 @@ public class AuthenticateController {
 		}
 
 		LOGGER.info("starting logging {}", vo.getNamaUser() + " at " + DateUtil.getIndonesianStringDate(new Date()));
-
-		try {
-			mapHeaderMessage = new HashMap<String, String>();
-			LoginUserVO loginUserVo = loginUserService.signIn(vo);
-			if (loginUserVo == null) {
-				return RestUtil.getJsonHttptatus(HttpStatus.NOT_ACCEPTABLE);
-			}
-			GrantedAuthority authority = new SimpleGrantedAuthority("USER");
-			String token = tokenAuthenticationService.addAuthentication(httpResponse, new UserAuthentication(
-					new User(loginUserVo.getNamaUser(), loginUserVo.getKataSandi(), Arrays.asList(authority))));
-
-			mapHeaderMessage.put("X-AUTH-TOKEN", token);
-
-			return RestUtil.getJsonResponse(loginUserVo, HttpStatus.OK, mapHeaderMessage);
-
-		} catch (Exception ex) {
-			LOGGER.error("Signing-in error {}", ex.getMessage());
-			return RestUtil.getJsonHttptatus(HttpStatus.UNAUTHORIZED);
+		
+		LoginUserVO loginUserVo = loginUserService.signIn(vo);
+		if (loginUserVo == null) {
+			mapHeaderMessage.put(BaseConstant.STATUS, HttpStatus.UNAUTHORIZED.name());
+			mapHeaderMessage.put(BaseConstant.STATUS_CODE, HttpStatus.UNAUTHORIZED.toString());
+			mapHeaderMessage.put(BaseConstant.MESSAGE, BaseConstant.HttpHeaderInfo.LABEL_SUCCESS);
+			return RestUtil.getJsonResponse(loginUserVo, HttpStatus.UNAUTHORIZED, mapHeaderMessage);
 		}
+		GrantedAuthority authority = new SimpleGrantedAuthority("USER");
+		String token = tokenAuthenticationService.addAuthentication(httpResponse, new UserAuthentication(
+				new User(loginUserVo.getNamaUser(), loginUserVo.getKataSandi(), Arrays.asList(authority))));
+
+		mapHeaderMessage.put("X-AUTH-TOKEN", token);
+
+		return RestUtil.getJsonResponse(loginUserVo, HttpStatus.OK, mapHeaderMessage);
+
 	}
 	
 

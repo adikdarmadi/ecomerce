@@ -13,7 +13,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * Common utility class.
  * 
- * @author Roberto
+ * @author Adik
  */
 public final class CommonUtil {
 

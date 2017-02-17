@@ -14,7 +14,7 @@ import org.joda.time.DateTime;
 /**
  * The Class DateUtil.
  * 
- * @author Roberto
+ * @author Adik
  */
 public final class DateUtil implements Serializable {
 

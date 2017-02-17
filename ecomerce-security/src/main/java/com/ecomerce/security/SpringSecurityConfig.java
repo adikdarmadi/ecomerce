@@ -18,7 +18,7 @@ import com.ecomerce.constant.SecurityConstant;
  * SpringSecurityConfig class
  * Di sini Kita tidak menggunakan XML Config untuk Spring Security 
  * 
- * @author Roberto
+ * @author Adik
  */
 @Configuration
 @EnableWebSecurity

@@ -3,7 +3,7 @@ package com.ecomerce.util;
 /**
  * The Class Base32.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class Base32Util {
 	private static final char[] BASE32_CODE_ARRAY = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"

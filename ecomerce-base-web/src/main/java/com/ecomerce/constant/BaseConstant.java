@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 /**
  * Constants value
  * 
- * @author Roberto
+ * @author Adik
  */
 public class BaseConstant {
 	public static final String ecomerce = "SkFTQU1FRElLQQ==";

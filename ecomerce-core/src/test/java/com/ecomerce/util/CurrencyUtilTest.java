@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 /**
  * The Class CurrencyUtilTest.
  * 
- * @author Roberto
+ * @author Adik
  */
 public class CurrencyUtilTest {
 

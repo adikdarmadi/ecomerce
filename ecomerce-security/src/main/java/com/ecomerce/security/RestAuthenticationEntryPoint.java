@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * RestAuthenticationEntryPoint class
  * set Unauthorized response from "Unauthorized client"
  * 
- * @author Roberto
+ * @author Adik
  */
 @Component("RestAuthenticationEntryPoint")
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {

@@ -24,7 +24,7 @@ import com.ecomerce.constant.BaseConstant;
  * Base Controller Class for handling messaga resource for internationalization
  * & locale
  * 
- * @author Roberto
+ * @author Adik
  */
 public abstract class LocaleController<V> {
 	/*
